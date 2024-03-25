@@ -1,0 +1,185 @@
+#top-logo {
+    display: flex;
+    height: 100px;
+    text-align: center;
+}
+
+#logo {
+    width:150px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+h1 {
+    max-width: 400px;
+    line-height: 100%;
+    margin-right: auto;
+}
+
+#search {
+    height: 1.5em;
+    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: 0;
+    border-radius: 5%;
+    padding: 0;
+    border-width: 1px;
+    border-color: lightgrey;
+    width: 50%;
+    max-width: 300px;
+}
+
+nav ul {
+    width: 100%;
+    text-align: center;
+    padding-left: 100px;
+    display: flex;
+    padding-top: 5px;
+}
+
+nav ul li {
+    list-style-type: none;
+    width: 15%;
+    font-size: 2rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    margin: 10px 0;
+    height: 50px;
+}
+
+#acasa:hover ul {
+    display: block;
+}
+
+.submeniu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    z-index: 10;
+    left: 10%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: none;
+    width: 100px;
+}
+
+.submeniu li {
+    font-size: 1rem;
+    width: 100px;
+    margin: auto;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-radius: 5%;
+    box-sizing: content-box;
+    text-shadow: 1px 1px gray;
+}
+
+.submeniu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.submeniu li:hover {
+    text-shadow: none;
+}
+
+#viziune {
+    padding: 0 50px;
+}
+
+#viziune h3 {
+    margin-bottom: 0;
+}
+
+#viziune > div {
+    padding: 0 50px;
+    display: flex;
+}
+
+dl {
+    padding-left: 50px;
+}
+
+#welcome, #welcome > section {
+    padding-top: 40px;
+}
+
+.categorii {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.servicii {
+    width: 400px;
+    height: 250px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.up {
+    display: block;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    background-color: white;
+    border-top: 1px solid red;
+    border-left: 1px solid orange;
+    border-right: 1px solid orange;
+    border-bottom: 1px solid green;
+    z-index: 100;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 3px 3px lightgrey;
+    font-size: 1.7rem;
+}
+
+.up:active {
+    box-shadow: none;
+    color: green;
+}
+
+.div-links-top-servicii {
+    text-align: center;
+}
+
+.links-top-servicii {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.links-top-servicii li  {
+    list-style-type: none;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.links-top-servicii li a {
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+}
+
+.iframe iframe {
+    margin-left: calc(50vw - 280px);
+    border: 0;
+}
+
+h4 {
+    text-align: center;
+}
