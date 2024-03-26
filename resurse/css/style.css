@@ -1,18 +1,26 @@
+/* general */
+html {
+    --inaltime-logo: 100px;
+    --latime-logo: 150px;
+    --latime-max-titlu: 400px;
+    --latime-max-search-bar: 300px;
+}
+
 #top-logo {
     display: flex;
-    height: 100px;
+    height: var(--inaltime-logo);
     text-align: center;
 }
 
 #logo {
-    width:150px;
+    width:var(--latime-logo);
     height: auto;
     margin-left: auto;
     margin-right: 30px;
 }
 
 h1 {
-    max-width: 400px;
+    max-width: var(--latime-max-titlu);
     line-height: 100%;
     margin-right: auto;
 }
@@ -27,7 +35,19 @@ h1 {
     border-width: 1px;
     border-color: lightgrey;
     width: 50%;
-    max-width: 300px;
+    max-width: var(--latime-max-search-bar);
+}
+
+/* navigation bar */
+
+nav {
+    --nav-font-size: 2rem;
+    --navbar-height: 50px;
+    --nav-background-color: white;
+    --nav-submediu-width: 100px;
+    --nav-submeniu-background-color: #f9f9f9;
+    --nav-link-text-color: black;
+    --nav-li-border: 1px solid lightgray;
 }
 
 nav ul {
@@ -41,16 +61,16 @@ nav ul {
 nav ul li {
     list-style-type: none;
     width: 15%;
-    font-size: 2rem;
+    font-size: var(--nav-font-size);
 }
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: white;
+    background-color: var(--nav-background-color);
     margin: 10px 0;
-    height: 50px;
+    height: var(--navbar-height);
 }
 
 #acasa:hover ul {
@@ -63,18 +83,18 @@ nav ul li {
     padding: 0;
     z-index: 10;
     left: 10%;
-    background-color: #f9f9f9;
+    background-color: var(--nav-submeniu-background-color);
     padding: 10px;
     border: none;
-    width: 100px;
+    width: var(--nav-submediu-width);
 }
 
 .submeniu li {
     font-size: 1rem;
-    width: 100px;
+    width: var(--nav-submediu-width);
     margin: auto;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: var(--nav-li-border);
+    border-bottom: var(--nav-li-border);
     border-radius: 5%;
     box-sizing: content-box;
     text-shadow: 1px 1px gray;
@@ -83,7 +103,7 @@ nav ul li {
 .submeniu li a {
     display: inline-block;
     text-decoration: none;
-    color: black;
+    color: var(--nav-link-text-color);
 }
 
 .submeniu li:hover {
@@ -103,12 +123,26 @@ nav ul li {
     display: flex;
 }
 
-dl {
-    padding-left: 50px;
+
+
+/* main & layout */
+
+main {
+    --reducere-color: red;
+    --reducere-background: rgb(255,255,255, 0.8);
+    --old-price-size: 0.8rem;
+    --new-price-size: 1.2rem;
+    --servicii-default-width: 400px;
+    --servicii-default-height: 250px;
+    --link-color-iframe: blue;
 }
 
 #welcome, #welcome > section {
     padding-top: 40px;
+}
+
+dl {
+    padding-left: 50px;
 }
 
 .categorii {
@@ -124,29 +158,68 @@ dl {
     top: -100px;
     left: 10px;
     text-align: left;
-    color: red;
+    color: var(--reducere-color);
     width: 90px;
-    background-color: rgb(255,255,255, 0.8);
+    background-color: var(--reducere-background);
     font-weight: bold;
 }
 
 .old-price {
     display: block;
-    font-size: 0.9rem;
+    font-size: var(--old-price-size);
 }
 
 .new-price {
     color: green;
-    font-size: 1.2rem;
+    font-size: var(--new-price-size);
 }
 
 .servicii {
-    width: 400px;
-    height: 250px;
+    width: var(--servicii-default-width);
+    height: var(--servicii-default-height);
 }
 
 figcaption {
     text-align: center;
+}
+
+.div-links-top-servicii {
+    text-align: center;
+}
+
+.links-top-servicii {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.links-top-servicii li  {
+    list-style-type: none;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.links-top-servicii li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--link-color-iframe);
+}
+
+.iframe iframe {
+    margin-left: calc(50vw - 280px);
+    border: 0;
+}
+
+h4 {
+    text-align: center;
+}
+
+
+/* footer */
+
+footer {
+    
 }
 
 .up {
@@ -172,36 +245,4 @@ figcaption {
 .up:active {
     box-shadow: none;
     color: green;
-}
-
-.div-links-top-servicii {
-    text-align: center;
-}
-
-.links-top-servicii {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.links-top-servicii li  {
-    list-style-type: none;
-    display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.links-top-servicii li a {
-    display: inline-block;
-    text-decoration: none;
-    color: blue;
-}
-
-.iframe iframe {
-    margin-left: calc(50vw - 280px);
-    border: 0;
-}
-
-h4 {
-    text-align: center;
 }
