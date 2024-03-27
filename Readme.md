@@ -5,7 +5,7 @@
 # Student: Condruz Filip - Gabriel	  
 # Materia: Tehnici Web 		  
 ------------------------------------------------------------------------------------------
-<pre style="font-weight: bolder;">
+<pre>
  ,_     _
  |\\_,-~/
  / _  _ |    ,--.
