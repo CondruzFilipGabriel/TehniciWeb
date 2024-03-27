@@ -1,9 +1,9 @@
-#      Universitatea din Bucuresti
+# Universitatea din Bucuresti
 # Facultatea de Matematica si Informatica 
-#    Specializarea: Informatica (ID) 	  
-#          Anul 1, Semestrul 2		  
-#    Student: Condruz Filip - Gabriel	  
-# 	  Materia: Tehnici Web 		  
+# Specializarea: Informatica (ID) 	  
+# Anul 1, Semestrul 2		  
+# Student: Condruz Filip - Gabriel	  
+# Materia: Tehnici Web 		  
 ------------------------------------------------------------------------------------------
 <pre>
  ,_     _
