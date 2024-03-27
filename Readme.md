@@ -18,11 +18,11 @@
  ((_/`(____,-'	
 </pre>
 ------------------------------------------------------------------------------------------
-	Website: Pisicile Plushy
-	Tip: Services Marketplace
+#	Website: Pisicile Plushy
+#	Tip: Services Marketplace
 
 ------------------------------------------------------------------------------------------
-	Tema de culori:
+#	Tema de culori:
 - paleta de culori a fost aleasa pentru a sugera caldura, viata si familiaritate
 - culorile variaza de la maro deschis (sugerand pamantul si casa) pana la verde aprins
  sugerand iarba verde si viata
