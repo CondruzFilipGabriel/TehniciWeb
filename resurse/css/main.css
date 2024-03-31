@@ -1,0 +1,220 @@
+/* main */
+
+main {
+    --old-price-size: 0.8rem;
+    --new-price-size: 1.2rem;
+    --servicii-default-width: 400px;
+    --servicii-default-height: 250px;
+}
+
+#welcome {
+    background-image: url('../imagini/banner\ -\ lung.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+    color: var(--active-color);
+    margin: auto;
+}
+
+#welcome > * {
+    text-decoration: none;
+    padding-left: 30%;
+    padding-right: 10%;
+}
+
+#welcome * {
+    color: var(--text-color);
+    text-shadow: 
+        1px 1px 5px var(--background-color),
+        -1px -1px 5px var(--background-color),
+        1px 1px 5px var(--background-color),
+        -1px -1px 5px var(--background-color)
+    ;
+    font-weight: bolder;
+}
+
+.categorii {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.reducere {
+    display: block;
+    position: relative;
+    top: -70%;
+    left: 10px;
+    text-align: left;
+    color: var(--text-color);
+    text-shadow:
+        -1px -1px 0 var(--color-red),  
+        1px -1px 0 var(--border-color),
+       -1px  1px 0 var(--color-red),
+        1px  1px 0 var(--border-color)
+    ;
+    width: 90px;
+    font-weight: bolder;
+    height: 0;
+}
+
+.old-price {
+    display: block;
+    font-size: var(--old-price-size);
+}
+
+.new-price {
+    font-size: var(--new-price-size);
+}
+
+.servicii {
+    width: var(--servicii-default-width);
+    height: var(--servicii-default-height);
+}
+
+figure {
+    text-align: center;
+}
+
+.links-top-servicii {
+    padding: 0;
+    text-align: center;
+    margin: auto 0 auto 15px;
+    font-size: 0;
+}
+
+.links-top-servicii li  {
+    font-size: var(--font-size);
+    list-style-type: none;
+    display: inline-block;
+    width: 120px;
+    min-width: 100px;
+    height: 60px;
+    vertical-align: top;
+    border-left: 5px solid var(--border-color);
+    overflow: hidden;
+}
+
+.links-top-servicii li > a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 900;
+    text-align: center;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    width: 80%;
+    height: 70%;
+    background-color: rgba(245, 211, 92, 0.6);
+    border-top-right-radius: 50%;
+    border: 5px solid var(--border-color);
+    box-shadow: 0px 0px 16px var(--border-color) inset;
+}
+
+.links-top-servicii li:hover {
+    border-left: 5px solid rgba(245, 222, 141, 0.5);
+    transition: all 0.5s linear;
+}
+
+.links-top-servicii li:hover > a {
+    color: var(--text-color);
+    text-shadow: 
+        1px 1px 5px var(--background-color),
+        -1px -1px 5px var(--background-color),
+        1px 1px 5px var(--background-color),
+        -1px -1px 5px var(--background-color)
+    ;
+    background-color: var(--text-color);
+    transition: all 0.5s linear;
+}
+
+.iframe {
+    text-align: center;
+}
+
+.iframe iframe {
+    border: 0;
+    max-width: 95%;
+    border: 8px solid var(--border-color);
+}
+
+h4 {
+    text-align: center;
+} 
+
+picture > img {
+    border-radius: 10%;
+}
+
+#tab-testimonials {
+    border: 1px solid var(--border-color);
+    width: 95%;
+    margin: auto;
+    --s: 2px; /* border spacing */
+    background-color: var(--text-color);
+
+}
+
+#tab-testimonials thead {
+    color: var(--highlight-color);
+}
+
+#tab-testimonials td {
+    border: 1px solid var(--border-color);
+    border-collapse: separate;
+    border-spacing: var(--s);
+}
+
+#tab-testimonials tbody tr:nth-child(2n) {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-weight: 900;
+}
+
+#tab-testimonials tbody tr:nth-child(2n+1) {
+    background-color: var(--text-color);
+    font-weight: 900;
+}
+
+#tab-testimonials tbody tr td:hover, #tab-testimonials tfoot tr td:hover {
+    background-color: rgba(60, 189, 43, 0.3);
+    transition: all 1s linear;
+}
+
+.utilizator-rating {
+    text-wrap: wrap;
+    text-align: center;
+    font-weight: 900;
+}
+
+.star-rating {
+    padding-left: 5%;
+}
+
+.mesaj-rating {
+    font-style: italic;
+}
+
+.table-footer {
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tab-caption {
+    caption-side: bottom;
+}
+
+#anunturi {
+    width: 100%;
+}
+
+#anunturi li {
+    padding-right: 30px;
+}

@@ -1,0 +1,63 @@
+/* general */
+html {
+    --inaltime-logo: 100px;
+    --latime-logo: 150px;
+    --latime-max-titlu: 400px;
+    --latime-max-search-bar: 300px;
+    --font-size: 16px;
+    font-size: var(--font-size);
+    transition: all 0.5s linear;
+}
+
+body {
+    --highlight-color: #F5AF22;
+    --background-color: #F5B022;
+    --border-color: #F5CA22;
+    --text-color: #F5F3DC;
+    --active-color: #D9F522;
+    --important-color: #81F522;
+    --color-red: #ff0000aa;
+    --color-dark: black;
+    overflow-x: hidden;
+}
+
+#top-logo {
+    display: flex;
+    height: var(--inaltime-logo);
+    text-align: center;
+}
+
+#logo {
+    width:var(--latime-logo);
+    height: auto;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+h1 {
+    max-width: var(--latime-max-titlu);
+    line-height: 100%;
+    margin-right: auto;
+}
+
+input {
+    height: 1.5em;
+    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: 0;
+    outline: none;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    width: 50%;
+    max-width: var(--latime-max-search-bar);
+}
+
+input::placeholder {
+    color: var(--background-color);
+    font-weight: bolder;
+}
+
+input:hover {
+    border: 2px solid var(--border-color);
+    box-shadow: 3px 3px 5px var(--color-red);
+}

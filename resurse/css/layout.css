@@ -1,0 +1,115 @@
+/* layout */
+
+.grid > * {
+    padding-top: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-areas: 
+        "welcome      welcome      welcome      welcome            "
+        "promo-client top-servicii top-servicii promo-furnizor     "
+        "servicii     servicii     servicii     servicii           "
+        "testimonials testimonials anunturi     intrebari-frecvente" 
+        ;
+}
+
+#welcome {
+    grid-area: welcome;
+}
+
+#top-servicii {
+    grid-area: top-servicii;
+}
+
+#promo-client {
+    grid-area: promo-client;
+}
+
+#promo-furnizor {
+    grid-area: promo-furnizor;
+}
+
+#servicii {
+    grid-area: servicii;
+}
+
+#testimonials {
+    grid-area: testimonials;
+}
+
+#anunturi {
+    grid-area: anunturi;
+}
+
+#intrebari-frecvente {
+    grid-area: intrebari-frecvente;
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 18px;
+    }
+
+    #welcome > * {
+        padding-left: 20% !important; 
+        padding-right: 5% !important;
+    }
+
+    .grid {
+        grid-template-areas: 
+            "welcome       welcome            "
+            "promo-client  promo-furnizor     "
+            "servicii      servicii           "
+            "top-servicii  top-servicii       "
+            "testimonials  testimonials       "
+            "anunturi      intrebari-frecvente"
+        ;
+    }
+}
+
+@media screen and (max-width:800px) {
+    html {
+        font-size: 16px;
+    }
+
+    #welcome > * {
+        padding-left: 10% !important; 
+        padding-right: 5% !important;
+    }
+
+    .table-container {
+        max-width: 300px;
+        margin: auto;
+        overflow-y: auto;
+        text-align: center;
+    }
+
+    .table-container table {
+        min-width: 310px;
+    }
+
+    #tab-testimonials {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .grid {
+        grid-template-areas: 
+            "welcome            "
+            "promo-client       "
+            "promo-furnizor     "
+            "servicii           "
+            "top-servicii       "
+            "testimonials       "
+            "anunturi           "
+            "intrebari-frecvente"
+        ;
+    }
+
+    animation: none !important;
+    transition: none !important;
+}

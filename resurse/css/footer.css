@@ -1,0 +1,79 @@
+/* footer */
+
+.up-container {
+    display: block;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 100;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: var(--background-color);
+    background: radial-gradient(circle, var(--text-color) 0%, var(--background-color) 100%);
+    opacity: 0.8;
+    text-align: center;
+}
+
+.up-container > span {
+    position: relative;
+    color: var(--highlight-color);
+    font-size: 1.5rem;
+    transform: scaleX(3);
+    padding-top: 22%;
+}
+
+.up-container:hover {
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+
+.up-container:not(:hover) {
+    opacity: 0.8;
+}
+
+.up-container:hover > span {
+    scale: 1.1;
+    transition: all 0.5s linear;
+}
+
+.up-container:not(:hover) > span {
+    scale: 1;
+    transition: all 0.5s linear;
+}
+
+.up-container > span {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    bottom: 50px;
+}
+
+.up-container:hover .up {
+    transition: all 0.5s linear;
+    transform: rotate(45deg);
+}
+
+.up-container:not(:hover) .up {
+    transition: all 0.5s linear;
+    transform: rotate(-45deg);
+}
+
+.up {
+    display: inline-block;
+    position: relative;
+    z-index: 110;
+    border-radius: 50%;
+    bottom: 1px;
+    left: -1px;
+    width: 85%;
+    height: 85%;
+    text-decoration: none;
+    border: 4px dashed var(--background-color);
+    border-radius: 50%;
+}
+
+.up:active + span {
+    box-shadow: none;
+    color: var(--color-red);
+}
