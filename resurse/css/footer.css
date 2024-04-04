@@ -77,3 +77,7 @@
     box-shadow: none;
     color: var(--color-red);
 }
+
+.watermark {
+    display: none;
+}

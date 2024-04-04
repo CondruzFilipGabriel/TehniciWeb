@@ -1,0 +1,77 @@
+@media print {
+    #banner {
+        position: relative;
+        bottom: 10px;
+        text-align: center;
+        width: 70%;
+        border: 4px solid black inset;
+    }
+
+    #top-servicii, #servicii, #logo, #search, .up-container {
+        display: none;
+    }
+
+    #welcome, #welcome * {
+        background-image: none;
+        text-shadow: none;
+        color: var(--color-dark);
+        padding: 0;
+        margin: auto;
+    }
+
+    .grid, .grid > * {
+        display: block;
+        padding: 0;
+        margin: auto;
+    }
+
+    body * {
+        text-decoration: none;
+        color: var(--color-dark);
+    }
+
+    header * {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        page-break-after: always;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    .watermark {
+        display: block;
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+        width: 4cm;
+        height: 1cm;
+        opacity: 0.4;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+        color: var(--color-dark);
+        z-index: 1000;
+        border: 3px solid var(--color-dark);
+        border-radius: 25%;
+    }
+
+    @page:right {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page:left {
+        margin-left: 1cm;
+        margin-right: 3cm;
+    }
+}

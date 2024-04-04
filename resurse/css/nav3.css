@@ -1,0 +1,170 @@
+/* navigation bar */
+nav {
+  display: flex;
+  position: sticky;
+  margin: 10px 6px;
+  top: 0;
+  z-index: 100;
+  background-color: #F5B022;
+  max-width: calc(100% - 15px);
+  box-sizing: content-box;
+}
+nav #burger, nav #burger-menu {
+  display: none;
+  font-size: 1.3rem;
+  color: #F5F3DC;
+}
+nav ul {
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+nav ul li {
+  background-color: #F5B022;
+  margin-left: 3rem;
+  list-style-type: none;
+  font-size: 1.5rem;
+  transition: background-color 0.5s ease;
+  height: 100%;
+  vertical-align: middle;
+}
+nav ul li a {
+  text-decoration: none;
+  margin: auto;
+}
+nav ul li a > span, nav ul li a > i {
+  font-size: 1.3rem;
+  color: #F5F3DC;
+}
+nav ul li .menu-name:hover {
+  background-color: #F5CA22;
+  animation: animatie_meniu 1s forwards;
+}
+
+.cu-submeniu:hover ul {
+  display: block;
+  animation: animatie_submeniu 1s forwards;
+  text-align: center;
+}
+
+.submeniu {
+  display: none;
+  position: absolute;
+  padding: 0;
+  z-index: 10;
+  border: none;
+  width: 105px;
+}
+.submeniu li {
+  font-size: 1rem;
+  width: 105px;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-top: #F5CA22;
+  border-bottom: #F5CA22;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+}
+.submeniu li a {
+  display: block;
+  position: relative;
+  color: #F5F3DC;
+  font-weight: bolder;
+  width: 90%;
+  transition: all 0.5s linear;
+}
+.submeniu li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 1s ease;
+}
+.submeniu li a:hover::after {
+  background-color: rgb(255, 255, 255); /* Opaque underline on hover */
+}
+.submeniu li a:hover {
+  background-color: #F5CA22;
+}
+
+@keyframes animatie_meniu {
+  0% {
+    text-shadow: 0 -30px 0px rgba(255, 0, 0, 0.6666666667);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(255, 0, 0, 0.6666666667);
+  }
+}
+@keyframes animatie_submeniu {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  ul li a > span {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .standard-menu li a > i, .standard-menu #acasa a span {
+    display: none !important;
+  }
+  #burger {
+    display: block !important;
+  }
+  #burger-menu:checked + .standard-menu {
+    display: block !important;
+    position: absolute;
+    top: 1.5rem;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    padding: 0;
+  }
+  #burger-menu:checked + .standard-menu #fa-home {
+    display: block !important;
+  }
+  #burger-menu:checked + .standard-menu li, #burger-menu:checked + .standard-menu li * {
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    padding: 0;
+    text-wrap: nowrap;
+    line-height: 1.5rem;
+  }
+  .submeniu li {
+    display: block;
+    height: 0 !important;
+    transition: all 0.5s linear;
+  }
+  #burger-menu:checked + .standard-menu a::after {
+    display: none;
+  }
+  #burger-menu:checked + .standard-menu .cu-submeniu .submeniu li {
+    display: block;
+    height: 1.5rem !important;
+    margin: auto;
+  }
+  #burger-menu:checked + .standard-menu .cu-submeniu .submeniu li * {
+    font-weight: normal;
+  }
+  #burger-menu:checked + .standard-menu li:hover, #burger-menu:checked + .standard-menu li:hover > a {
+    background-color: #F5CA22;
+  }
+  #burger-menu:checked + .standard-menu .menu-name:hover {
+    animation: none;
+  }
+  #burger-menu:checked + ul li a > span {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=nav3.css.map */
