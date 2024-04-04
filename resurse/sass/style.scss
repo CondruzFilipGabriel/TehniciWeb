@@ -1,0 +1,207 @@
+/* navigation bar */
+$background: #F5B022;
+$highlight: #F5AF22;
+$border: #F5CA22;
+$text: #F5F3DC;
+$active: #D9F522;
+$important: #81F522;
+$red: #ff0000aa;
+$dark: black;
+$nav-font-size: 1.5rem;
+$nav-text-font-size: 1.3rem;
+$submeniu-font-size: 1rem;
+$nav-submeniu-width: 105px;
+
+@mixin menu-icon {
+    font-size: $nav-text-font-size;
+    color: $text;
+}
+
+@mixin reset-position {
+    left: 0;
+    margin: auto;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    margin: 10px 6px;
+    top: 0;
+    z-index: 100;
+    background-color: $background;
+    max-width: calc(100% - 15px);
+    box-sizing: content-box;
+    #burger, #burger-menu {
+        display: none;
+        @include menu-icon;
+    }
+    ul {
+        display: flex;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0;
+        li {
+            background-color: $background;
+            margin-left: 3rem;
+            list-style-type: none;
+            font-size: $nav-font-size;
+            transition: background-color 0.5s ease;
+            height: 100%;
+            vertical-align: middle;
+            a {
+                text-decoration: none;
+                margin: auto;
+                > span, > i {
+                    @include menu-icon;
+                }
+            }
+            .menu-name:hover {
+                background-color: $border;
+                animation: animatie_meniu 1s forwards;
+            }
+        }
+    }
+}
+
+.cu-submeniu:hover ul {
+    display: block;
+    animation: animatie_submeniu 1s forwards;
+    text-align: center;
+}
+
+// li * {
+//     transition: all 0.5s linear;
+// }
+
+.submeniu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    z-index: 10;
+    border: none;
+    width: $nav-submeniu-width;
+    li {
+        font-size: $submeniu-font-size;
+        width: $nav-submeniu-width;
+        margin: auto;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        border-top: $border;
+        border-bottom: $border;
+        text-shadow: 1px 1px rgba(255,255,255,0.2);
+        a {
+            display: block;
+            position: relative;
+            color: $text;
+            font-weight: bolder;
+            width: 90%;
+            transition: all 0.5s linear;
+        }
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0);
+            transition: background-color 1s ease;
+        }          
+        a:hover::after {
+        background-color: rgba(255, 255, 255, 1); /* Opaque underline on hover */
+        }
+    }
+    li a:hover {
+        background-color: $border;
+    }
+}
+
+@keyframes animatie_meniu {
+    0% {
+        text-shadow: 0 -30px 0px $red;
+    }
+    100% {
+        text-shadow: 0 0 0 $red;
+    }
+}
+
+@keyframes animatie_submeniu {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    ul li a >span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .standard-menu li a >i, .standard-menu #acasa a span {
+        display: none !important;
+    }
+    
+    #burger {
+        display: block !important;
+    }
+
+    #burger-menu:checked {
+        +.standard-menu {
+            display: block !important;
+            position: absolute;
+            top: $nav-font-size;
+            width: 100%;
+            @include reset-position;
+            #fa-home {
+                display: block !important;
+            }
+            li, li * {
+                position: relative;
+                width: 100%;
+                @include reset-position;
+                text-wrap: nowrap;
+                line-height: $nav-font-size;
+            }
+        }
+    }
+
+    .submeniu {
+        li {
+            display: block;
+            height: 0 !important;
+            transition: all 0.5s linear;
+        }
+    }
+
+    #burger-menu:checked +.standard-menu a::after {
+        display: none;
+    }
+
+    #burger-menu:checked +.standard-menu .cu-submeniu {
+        .submeniu li {
+            display: block;
+            height: $nav-font-size !important;
+            margin: auto;
+            * {
+                font-weight: normal;
+            }
+        }
+    }
+
+    #burger-menu:checked +.standard-menu li:hover, #burger-menu:checked +.standard-menu li:hover > a {
+        background-color: $border;
+    }
+
+    #burger-menu:checked +.standard-menu .menu-name:hover {
+        animation: none;
+    }
+
+    #burger-menu:checked +ul li a >span {
+        display: block;
+    }
+}
