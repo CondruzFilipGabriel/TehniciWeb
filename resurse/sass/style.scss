@@ -109,7 +109,7 @@ nav {
             transition: background-color 1s ease;
         }          
         a:hover::after {
-        background-color: rgba(255, 255, 255, 1); /* Opaque underline on hover */
+        background-color: rgba(255, 255, 255, 1); 
         }
     }
     li a:hover {
