@@ -1,0 +1,44 @@
+{
+  "name": "pisicile-plushy",
+  "version": "1.0.0",
+  "description": "Servicii la Domiciliu: curățenie, baby sitter, bucătar, caterer la evenimente, entertainer la evenimente pentru copii, îngrijire vârstnici, îngrijire animale de companie, masaj, decorator interior",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pisicile",
+    "plushy",
+    "servicii",
+    "la",
+    "domiciliu",
+    "la",
+    "domiciliu",
+    "acasă",
+    "curățenie",
+    "baby",
+    "sitter",
+    "bucătar",
+    "catering",
+    "la",
+    "evenimente",
+    "entertainer",
+    "pentru",
+    "copii",
+    "îngrijire",
+    "vârstnici",
+    "îngrijire",
+    "animale",
+    "de",
+    "companie",
+    "masaj",
+    "decorator",
+    "interior"
+  ],
+  "author": "Condruz FIlip - Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
