@@ -33,9 +33,10 @@ nav ul li a {
   text-decoration: none;
   margin: auto;
 }
-nav ul li a > span, nav ul li a > i {
+nav ul li a span, nav ul li a i {
   font-size: 1.3rem;
   color: #F5F3DC;
+  font-style: normal;
 }
 nav ul li .menu-name:hover {
   background-color: #F5CA22;
@@ -85,7 +86,7 @@ nav ul li .menu-name:hover {
   transition: background-color 1s ease;
 }
 .submeniu li a:hover::after {
-  background-color: rgb(255, 255, 255); /* Opaque underline on hover */
+  background-color: rgb(255, 255, 255);
 }
 .submeniu li a:hover {
   background-color: #F5CA22;

@@ -1,0 +1,11 @@
+#err-coloane {
+    width: 100%;
+}
+
+#err-coloane * {
+    text-align: center;
+}
+
+#err-imag img {
+    width: 10%;
+}

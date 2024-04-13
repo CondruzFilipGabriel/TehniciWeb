@@ -21,6 +21,39 @@ body {
     overflow-x: hidden;
 }
 
+a:not(li a):not(.up) {
+    background: radial-gradient(circle at center, rgba(255, 232, 165, 1) 0%, rgba(255, 232, 165, 1) 40%, rgba(255, 0, 0, 0) 80%, rgba(255, 0, 0, 0) 100%);
+    background-position: center;
+    background-size: 0;
+    background-repeat: no-repeat;
+    transition: all 0.5s linear;
+}
+
+a:not(li a):not(.up):active {
+    border: 1px solid var(--border-color);
+}
+
+a:not(li a):not(.up):visited {
+    color: var(--highlight-color);
+}
+
+a:not(li a):not(.up)[href ^= "http"] {
+    font-size: calc(var(--font-size) * 1.5);
+}
+
+a:not(li a):not(.up)[href ^= "http"]::before {
+    content: "\2BB3";
+    color: var(--color-dark);
+}
+
+a:not(li a):not(.up)[href ^= "http"]:hover ::before {
+    color: var(--color-red);
+}
+
+a:not(li a):not(.up):hover {
+    background-size: 100%;
+}
+
 #top-logo {
     display: flex;
     height: var(--inaltime-logo);

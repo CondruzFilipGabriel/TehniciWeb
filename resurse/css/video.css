@@ -1,0 +1,18 @@
+/* video - etapa 4 */
+.video-4 {
+  width: 100%;
+}
+.video-4 video {
+  width: 70%;
+  min-width: 100px;
+  max-width: 500px;
+  margin-left: 10%;
+}
+.video-4 video track {
+  background: linear-gradient(to right, black, rgba(255, 0, 0, 0.6666666667));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(255, 255, 255, 0);
+}
+
+/*# sourceMappingURL=video.css.map */

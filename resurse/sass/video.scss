@@ -1,0 +1,26 @@
+/* video - etapa 4 */
+
+$background: #F5B022;
+$highlight: #F5AF22;
+$border: #F5CA22;
+$text: #F5F3DC;
+$active: #D9F522;
+$important: #81F522;
+$red: #ff0000aa;
+$dark: black;
+
+.video-4 {
+    width: 100%;
+    video {
+        width: 70%;
+        min-width: 100px;
+        max-width: 500px;
+        margin-left: 10%;
+        track {
+            background: linear-gradient(to right, $dark, $red);
+            background-clip: text;
+            -webkit-background-clip: text; 
+            color: rgba(255, 255, 255, 0);
+        }
+    }
+}
