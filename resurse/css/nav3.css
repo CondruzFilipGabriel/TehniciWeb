@@ -102,10 +102,12 @@ nav ul li .menu-name:hover {
 }
 @keyframes animatie_submeniu {
   0% {
-    height: 0%;
+    transform: scaleY(0);
+    transform-origin: top center;
   }
   100% {
-    height: 100%;
+    transform: scaleY(100%);
+    transform-origin: top center;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -141,9 +143,13 @@ nav ul li .menu-name:hover {
     text-wrap: nowrap;
     line-height: 1.5rem;
   }
+  .submeniu {
+    min-height: fit-content !important;
+    transform: scaleY(0);
+    animation: animatie-submeniu 1s forwards;
+  }
   .submeniu li {
     display: block;
-    height: 0 !important;
     transition: all 0.5s linear;
   }
   #burger-menu:checked + .standard-menu a::after {

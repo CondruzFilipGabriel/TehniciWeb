@@ -5,6 +5,7 @@
 }
 
 .grid {
+    position: relative;
     display: grid;
     grid-gap: 10px;
     margin-left: 10px;

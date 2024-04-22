@@ -8,11 +8,13 @@
   max-width: 500px;
   margin-left: 10%;
 }
-.video-4 video track {
+.video-4 video::cue {
+  font-weight: bolder;
   background: linear-gradient(to right, black, rgba(255, 0, 0, 0.6666666667));
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(255, 255, 255, 0);
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=video.css.map */
