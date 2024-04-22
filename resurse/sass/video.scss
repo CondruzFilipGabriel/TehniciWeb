@@ -16,11 +16,14 @@ $dark: black;
         min-width: 100px;
         max-width: 500px;
         margin-left: 10%;
-        track {
-            background: linear-gradient(to right, $dark, $red);
-            background-clip: text;
-            -webkit-background-clip: text; 
-            color: rgba(255, 255, 255, 0);
-        }
+    }
+    video::cue {
+        font-weight: bolder;
+        background: linear-gradient(to right, $dark, $red);
+        background-clip: text;
+        -webkit-background-clip: text; 
+        color: rgba(255, 255, 255, 0);
+        font-size: 30px;
     }
 }
+
