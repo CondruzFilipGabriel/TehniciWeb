@@ -7,6 +7,7 @@
 # 	  Materia: Tehnici Web 		  #
 ###########################################
 
+```
  ,_     _
  |\\_,-~/
  / _  _ |    ,--.
@@ -17,20 +18,11 @@
  \ \ ,  /      |
   || |-_\__   /
  ((_/`(____,-'
-
+```
 ------------------------------------------------------------------------------------------
 	Website: Pisicile Plushy
 	Tip: Services Marketplace
 
-------------------------------------------------------------------------------------------
-	Tema de culori:
--> paleta de culori a fost aleasa pentru a sugera caldura, viata si familiaritate
--> culorile variaza de la maro deschis (sugerand pamantul si casa) pana la verde aprins
- sugerand iarba verde si viata
--> palesta de culori contine si alb - care este necesar si util pentru a transmite 
- mesajul de curatenie, inocenta si puritate pe care orice persoana il asociaza cu cuvantul 
- "acasa"
- 
 ------------------------------------------------------------------------------------------
 
  
