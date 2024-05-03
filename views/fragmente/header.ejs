@@ -1,9 +1,13 @@
 <header>
     <section id="top-logo">
-        <img id="logo" src="./resurse/imagini/logo.png" alt="Pisicile Plushy logo">
+        <img id="logo" src="/resurse/imagini/logo.png" alt="Pisicile Plushy logo">
         <h1>Servicii la cheie la tine acasa!</h1>
         
-        <input type="text" id="search" name="search" placeholder=" &#128269; Cauta:">
+        <div class="themes btn btn-warning rounded-pill form-check form-switch" id="themes">
+            <label class="form-check-label" for="themeSwitch" id="dark-theme-label"><i class="bi bi-moon" id="dark-theme"></i></label>
+            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" />
+            <label class="form-check-label" for="themeSwitch" id="light-theme-label"><i class="bi bi-sun" id="light-theme"></i></label>            
+        </div>
     </section>
 </header>
 
@@ -13,25 +17,25 @@
 
     <ul class="standard-menu">
         <li class="cu-submeniu" id="acasa" title="Acasa">
-            <a class="menu-name" href="/index">
+            <a class="menu-name" href="/">
                 <i id="fa-home" class="fa-solid fa-house"></i>
                 <span class="menu-names">Acasa</span>
             </a>
             <ul class="submeniu">
-                <li><a href="#promo-client">Viziunea noastra</a></li>
-                <li><a href="#servicii">Categorii de servicii</a></li>
-                <li><a href="#testimonials">Opinii ale clientilor</a></li>
+                <li><a href="/#promo-client">Viziunea noastra</a></li>
+                <li><a href="/#servicii">Categorii de servicii</a></li>
+                <li><a href="/#testimonials">Opinii ale clientilor</a></li>
             </ul>
         </li>
 
         <li class="cu-submeniu" id="marketplace" title="Marketplace">
-            <a class="menu-name" href="/marketplace.html">
+            <a class="menu-name" href="/market">
                 <i>&#127978;</i> 
                 <span class="menu-names">Market</span>
             </a>
             <ul class="submeniu">
-                <li><a href="/furnizori.html">Furnizor Servicii</a></li>
-                <li><a href="/clienti.html">Client Servicii</a></li>
+                <li title="Categorii"><a href="/market">Categorii servicii</a></li>
+                <li title="Filtrare"><a href="/produse">Lista produse</a></li>
             </ul>
         </li>
 
@@ -43,18 +47,14 @@
         </li>
 
         <li class="cu-submeniu" id="users" title="Register / Login">
-            <a class="menu-name" href="/Users.html">
+            <a class="menu-name" href="/users">
                 <i>&#128100;</i> 
                 <span class="menu-names">Users</span>
             </a>
-            <ul class="submeniu">
-                <li><a href="/Users.html#login">Autentificare utilizator</a></li>
-                <li><a href="/Users.html#register">Utilizator nou</a></li>
-            </ul>
         </li>
 
         <li title="Cos de cummparaturi">
-            <a class="menu-name" href="/cos.html">
+            <a class="menu-name" href="/cos">
                 <i>&#128722;</i> 
                 <span class="menu-names">Cos</span>
             </a>

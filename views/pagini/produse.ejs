@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>Pisicile Plushy - Produse</title>
+        <meta name="keywords" content="pisicile plushy, servicii la domiciliu, la domiciliu, acasă, curățenie, baby sitter, bucătar, catering la evenimente, entertainer pentru copii, îngrijire vârstnici, îngrijire animale de companie, masaj, decorator interior">
+        <meta name="description" content="Servicii la Domiciliu: curățenie, baby sitter, bucătar, caterer la evenimente, entertainer la evenimente pentru copii, îngrijire vârstnici, îngrijire animale de companie, masaj, decorator interior">
+        <link href="/resurse/css/lista-produse.css" rel="stylesheet" type="text/css" >
+
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>
+            
+        <%- include("../fragmente/header.ejs");  %> 
+
+        <main>
+
+            <div class="filter-container">
+                <h3 class="row">Filtrati dupa:</h3>
+
+                <div class="row">
+                    <label class="col-sm" for="text-search-area">Cautati: </label>
+                    <input class="col-sm form-control" type="text" id="text-search-area" name="text-search-area" placeholder="Introduceri textul de cautat" />
+                </div>
+
+                <div class="row">
+                    <label class="col-sm" for="categorie">Alegeri o categorie: </label>
+                    <input class="col-sm form-control" list="categorii" name="categorie" id="categorie" />
+                    <datalist id="categorii">
+                        <option value="curatenie"></option>
+                        <option value="decorator-interior"></option>
+                        <option value="canto"></option>
+                        <option value="reparatii-electrice"></option>
+                        <option value="reparatii-acoperis"> </option>
+                        <option value="reparatii-instalatii"></option>
+                        <option value="babysitting"></option>
+                        <option value="gatit"></option>
+                        <option value="pian"></option>
+                        <option value="entertainer"></option>
+                        <option value="ingrijire-varstnici"></option>
+                        <option value="ingrijire-pets"></option>
+                        <option value="catering"></option>
+                        <option value="masaj"></option>
+                        <option value="barman"></option>
+                        <option value="deratizare"></option>
+                        <option value="transport"></option>
+                        <option value="organizator-evenimente"></option>
+                    </datalist>
+                </div>
+
+                <div class="row">
+                    <label class="col-sm" for="volume"><b>Pret maxim: </b></label>
+                    <span class="col-sm-8 container-range">
+                        <b class="">0 </b>
+                        <input class="form-range" type="range" id="pret" name="pret" min="0" max="2000" value="0" />
+                        <b class=""> 2000</b>
+                    </span>
+                    <span class="col container-pret-calculat">
+                        <b>[</b>
+                        <b id="valoare-pret">0</b>
+                        <b> ]</b>
+                        <script>
+                            let pretInput = document.getElementById('pret');
+                            let pretValue = document.getElementById('valoare-pret');
+                            pretInput.addEventListener('input', function() {
+                                pretValue.textContent = pretInput.value;
+                            });
+                        </script>
+                    </span>
+                </div>
+
+                <div class="row">
+                    <b class="col-sm">Optiuni abonament: </b>
+                    <select class="form-select col-sm" size="3" multiple name="abonament" id="abonament">
+                        <option value="fara">fara abonament</option>
+                        <option value="saptamanal">abonament saptamanal</option>
+                        <option value="lunar">abonament lunar</option>
+                    </select>
+                </div>
+                
+                <div class="row persoana-container">
+                    <b class="col-sm">Persoana: </b>
+                    <div class="col-sm-8 row">
+                        <input class="btn-check" type="radio" id="persoana-fizica" name="persoana" value="true" autocomplete="off"/>
+                        <label class="col btn btn-outline-success" for="persoana-fizica"> fizica </label>
+                        <input class="btn-check" type="radio" id="persoana-juridica" name="persoana" value="false" autocomplete="off" />
+                        <label class="col btn btn-outline-success" for="persoana-juridica"> juridica </label>
+                        <input class="btn-check" type="radio" id="persoana-neselectat" name="persoana" value="" checked autocomplete="off" />
+                        <label class="col btn btn-outline-success" for="persoana-neselectat"> neselctat </label>
+                    </div>
+                </div>
+
+                <div class="form-floating row">
+                    <textarea class="col form-control" name="textarea-description-search" id="textarea-description-search"></textarea>
+                    <label class="form-floating-label" id="form-floating-label" for="textarea-description-search">Invalid input (doar cuvinte separate de virgule, fara cifre)</label>
+                </div>
+
+                <div class="row">
+                    <label for="ore">Disponibil in intervalul orar: </label>
+                    <div class="row">
+                        <div class="row">
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-0002" name="ore-0002" value="00-02" />
+                            <label class="col" for="ore-0002">00:00-02:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-0204" name="ore-0204" value="02-04" />
+                            <label class="col" for="ore-0204">02:00-04:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-0406" name="ore-0406" value="04-06" />
+                            <label class="col" for="ore-0406">04:00-06:00 </label>
+                        </div>
+
+                        <div class="row">
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-0608" name="ore-0608" value="06-08" />
+                            <label class="col" for="ore-0608">06:00-08:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-0810" name="ore-0810" value="08-10" />
+                            <label class="col" for="ore-0810">08:00-10:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-1012" name="ore-1012" value="10-12" />
+                            <label class="col" for="ore-1012">10:00-12:00 </label>
+                        </div>
+
+                        <div class="row">
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-1214" name="ore-1214" value="12-14" />
+                            <label class="col" for="ore-1214">12:00-14:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-1416" name="ore-1416" value="14-16" />
+                            <label class="col" for="ore-1416">14:00-16:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-1618" name="ore-1618" value="16-18" />
+                            <label class="col" for="ore-1618">16:00-18:00 </label>
+                        </div>
+
+                        <div class="row">
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-1820" name="ore-1820" value="18-20" />
+                            <label class="col" for="ore-1820">18:00-20:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-2022" name="ore-2022" value="20-22" />
+                            <label class="col" for="ore-2022">20:00-22:00 </label>
+    
+                            <input class="form-check-input checkbox" type="checkbox" checked id="ore-2224" name="ore-2224" value="22-24" />
+                            <label class="col" for="ore-2224">22:00-24:00 </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label class="col-sm" for="data"><b>Disponibil de: </b></label>
+                    <select class="form-select col-sm" id="data" name="data">
+                        <option value="">......</option>
+                        <option value="0">0 (azi)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div class="butoane row">
+                    <button id="filter-button" class="col btn btn-warning btn-sm btn-outline-success rounded-pill border border-2">
+                        <i class="bi bi-filter-square"></i>
+                        <b> Filtreaza</b>
+                    </button>
+                    <button id="sort-ascending-button" class="col btn btn-warning btn-sm btn-outline-success rounded-pill border border-2">
+                        <i class="bi bi-sort-up-alt"></i>
+                        <b> Sortare crescatoare</b>
+                    </button>
+                    <button id="sort-descending-button" class="col btn btn-warning btn-sm btn-outline-success rounded-pill border border-2">
+                        <i class="bi bi-sort-down"></i>
+                        <b> Sortare descrescatoare</b>
+                    </button>
+                    <button id="calculator-button" class="col btn btn-warning btn-sm btn-outline-success rounded-pill border border-2">
+                        <i class="bi bi-calculator"></i>
+                        <b> Pretul mediu</b>
+                    </button>
+                    <button id="filter-reset-button" class="col btn btn-warning btn-sm btn-outline-success rounded-pill border border-2">
+                        <i class="bi bi-stop-circle"></i>
+                        <b> Resetare filtru</b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="lista-container" id="lista-container">
+                <% for(let prod of produse) { %>
+                    <%- include("../fragmente/produs-in-lista.ejs", { prod: prod }); %>
+                <% } %>
+            </div>            
+            
+            <%- include("../fragmente/footer.ejs");  %>
+        </main>
+    </body>
+</html>

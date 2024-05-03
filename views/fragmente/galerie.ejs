@@ -1,0 +1,86 @@
+<div class="galerie-animata">
+    <%
+        let j = 0;
+        let k = (j+1) % galerieBanner.length;
+    %>
+        <picture class="banner-galerie-aniamata1">            
+            <img class="banner-poza-mare" src=<%= galerieBanner[j].nume_mare %> alt=<%= galerieBanner[j].alt %> />
+            <figcaption class="banner-brau-text"><%= galerieBanner[j].descriere %></figcaption>
+        </picture>
+        <picture class="banner-galerie-aniamata2">            
+            <img class="banner-poza-mare1" src=<%= galerieBanner[k].nume_mare %> alt=<%= galerieBanner[k].alt %> />
+            <figcaption class="banner-brau-text1"><%= galerieBanner[k].descriere %></figcaption>
+        </picture>
+    <%
+        setTimeout(() => {
+    %>
+    <script>
+        let i = <%= j %>; 
+        let l = <%= k %>;
+        
+        function updateBanner() {
+            console.log("suntem in script tag!!!");
+            document.querySelectorAll('.banner-poza-mare').forEach((img) => {
+                img.src = galerieBanner[i].nume_mare;
+                img.alt = galerieBanner[i].alt;
+            });
+            document.querySelector('.banner-brau-text').textContent = galerieBanner[i].descriere;
+            document.querySelector('.banner-galerie-aniamata1').style.animation = "banner 10s forwards";
+
+            document.querySelectorAll('.banner-poza-mare1').forEach((img) => {
+                img.src = galerieBanner[l].nume_mare;
+                img.alt = galerieBanner[l].alt;
+            });
+            document.querySelector('.banner-brau-text1').textContent = galerieBanner[l].descriere;
+            document.querySelector('.banner-galerie-aniamata2').style.animation = "banner 10s forwards";
+        }
+        updateBanner();
+    </script>
+    <%
+            <!-- console.log("running the timeout function..."); -->
+        }, 10000);
+    %>
+</div>
+
+<div class="categorii">
+    <% for(let i = 0; i < Math.floor(galerie.length / 3) * 3; ++i) { 
+        let fig = galerie[i]; %>        
+        <figure>
+            <picture>
+                <source srcset=<%= fig.nume_mic %> media="(max-width:550px)"/>
+                <source srcset=<%= fig.nume_mediu %> media="(max-width:1000px)"/>
+                <img src=<%= fig.nume_mare %> title=<%= fig.title %> alt=<%= fig.alt %> />
+            </picture>
+            <figcaption>
+                <b>
+                    <%= fig.descriere %>
+                    <% if(fig.license != "free") { %>
+                        <a href=<%= fig.license %> target="_blank"">
+                            (sursa imagine)
+                        </a>
+                    <% } %>
+                </b>
+                <% if (fig.descriere == "Curatenie") { %>
+                    <math class="reducere" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mrow>
+                            <mtext>Super</mtext>
+                        </mrow>
+                        <mrow>
+                            <mtext>reducere!</mtext>
+                        </mrow>
+                        <mrow class="old-price">
+                            <menclose notation="updiagonalstrike">
+                                <mn>300</mn>
+                            </menclose>
+                            <mtext> RON</mtext>
+                        </mrow>
+                        <mrow class="new-price">
+                            <mn>200</mn>
+                            <mtext> RON</mtext>
+                        </mrow>
+                    </math>    
+                <% } %>
+            </figcaption>
+        </figure>
+    <% } %>
+</div>  

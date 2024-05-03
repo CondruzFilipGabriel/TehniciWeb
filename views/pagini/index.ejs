@@ -12,6 +12,7 @@
 
         <main>
             <div class="grid">
+                <!-- efect-css-duotone -->
                 <section id="welcome">
                     <h2>
                         Bine ati venit!
@@ -58,104 +59,19 @@
                 </section>
     
                 <section id="servicii">
-                    <h2>
+                    <!-- efect-css-stilizare-hr -->
+                    <hr id="special-hr">
+                    <br />
+                    <!-- efect-css-reflexie-text -->
+                    <h2 id="text-cu-reflexie">
                         Lista de <em>Servicii</em>:
+                        <div id="text-reflectat">
+                            Lista de <em>Servicii</em>:
+                        </div>
                     </h2>
-                    <div class="categorii">
-                        <figure>    
-                            <picture>
-                                <source srcset="resurse/imagini/cleaning-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/cleaning-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/cleaning-mare.jpg" title="Curatenie" alt="Servicii de curatenie"/>
-                            </picture>
-                            <figcaption>
-                                <b>Curatenie</b>
-                                <math class="reducere" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                                    <mrow>
-                                        <mtext>Super</mtext>
-                                    </mrow>
-                                    <mrow>
-                                        <mtext>reducere!</mtext>
-                                    </mrow>
-                                    <mrow class="old-price">
-                                        <menclose notation="updiagonalstrike">
-                                            <mn>300</mn>
-                                        </menclose>
-                                        <mtext> RON</mtext>
-                                    </mrow>
-                                    <mrow class="new-price">
-                                        <mn>200</mn>
-                                        <mtext> RON</mtext>
-                                    </mrow>
-                                </math>    
-                            </figcaption>    
-                        </figure>                          
-    
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/baby-sitting-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/baby-sitting-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/baby-sitting-mare.jpg" title="Baby Sitting" alt="Servicii de baby sitting"/>
-                            </picture>
-                            <figcaption><b>Baby sitting</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/bucatar-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/bucatar-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/bucatar-mare.jpg" title="Gatit" alt="Servicii de gatit"/>
-                            </picture>
-                            <figcaption><b>Gatit (bucatar)</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/caterer-evenimente-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/caterer-evenimente-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/caterer-evenimente-mare.jpg" title="Catering" alt="Servicii de catering"/>
-                            </picture>
-                            <figcaption><b>Catering la evenimente</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/children-party-entertainer-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/children-party-entertainer-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/children-party-entertainer-mare.jpg" title="Entertainer pentru copii" alt="Servicii de entertaining pentru copii"/>
-                            </picture>
-                            <figcaption><b>Entertainer pentru copii</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/ingrijire-varstnici-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/ingrijire-varstnici-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/ingrijire-varstnici-mare.jpg" title="Ingrijire varstnici" alt="Servicii de ingrijire pentru varstnici"/>
-                            </picture>
-                            <figcaption><b>Ingrijire varstnici</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/pet-sitting-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/pet-sitting-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/pet-sitting-mare.jpg" title="Ingrijire animale de companie" alt="Servicii de ingrijire pentru animalele de companie"/>
-                            </picture>
-                            <figcaption><b>Ingrijire animale de companie</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/massage-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/massage-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/massage-mare.jpg" title="Masaj" alt="Servicii de masaj"/>
-                            </picture>
-                            <figcaption><b>Masaj</b></figcaption>
-                        </figure>
-                        <figure>
-                            <picture>
-                                <source srcset="resurse/imagini/decorator-interior-mic.jpg" media="(max-width:800px)"/>
-                                <source srcset="resurse/imagini/decorator-interior-mediu.jpg" media="(max-width:1200px)"/>
-                                <img src="resurse/imagini/decorator-interior-mare.jpg" title="Decorator interior" alt="Servicii de decatorat la interior"/>
-                            </picture>
-                            <figcaption><b>Decorator interior</b></figcaption>
-                        </figure>
-                    </div>                    
+
+                    <%- include("../fragmente/galerie.ejs") %>
+                    
                 </section>
     
                 <section id="testimonials">
@@ -233,7 +149,7 @@
                 </section>
 
                 <section id="top-servicii">
-                    <h2>
+                    <h2 class="text-warning">
                         Serviciile cele mai apreciate in ultima luna:
                     </h2>
                     <div class="iframe-container">
@@ -308,15 +224,9 @@
                     </details>
                 </section>
             </div>
-            <p id="banner">
-                <strong>
-                    Acest site este un proiect educational al studentilor de la 
-                    <a href="https://fmi.unibuc.ro/" target="_blank">Facultatea de Informatica a Universitatii din Bucuresti.</a> 
-                    Toate datele continute sunt fictive.
-                </strong>
-            </p>
-            <p>
+            <p id="show-ip">
                 Ip-ul dumneavoastra este <%- locals.ip %>.
+                Iar ultima pagina accesata este: <span id="last-cookie"></span>.
             </p>
         </main>
 

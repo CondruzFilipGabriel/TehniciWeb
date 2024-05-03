@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>Pisicile Plushy - prodususe</title>
+        <meta name="keywords" content="pisicile plushy, servicii la domiciliu, la domiciliu, acasă, curățenie, baby sitter, bucătar, catering la evenimente, entertainer pentru copii, îngrijire vârstnici, îngrijire animale de companie, masaj, decorator interior">
+        <meta name="description" content="Servicii la Domiciliu: curățenie, baby sitter, bucătar, caterer la evenimente, entertainer la evenimente pentru copii, îngrijire vârstnici, îngrijire animale de companie, masaj, decorator interior">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/produs-unic.css">
+
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>
+            
+        <%- include("../fragmente/header.ejs");  %> 
+
+        <main>
+
+            <a id="produs-back" href="/produse">&#8612; back</a>
+
+            <div class="produsus-unic">
+                <h3 id="produs-nume"><%= produs.nume %></h3>
+            
+                <em id="produs-descriere"><%= produs.descriere %></em>
+            
+                <span id="produs-categorie">Categorie: <%= produs.categorie %></span>
+            
+                <span id="produs-rating">
+                    <% for(let j = 0; j < produs.rating.length; ++j) { %>
+                        &#x2B50;
+                    <% } %>
+                </span>
+            
+                <span id="produs-pret">Pret: <%= produs.pret %> lei</span>
+            
+                <span id="produs-discount">Discount: <%= produs.discount %> %</span>
+            
+                <span id="produs-disponibil">Disponibil din: 
+                    <time>
+                        <% 
+                            const azi = new Date();
+                            const ziDisponibila = new Date(azi);
+                            ziDisponibila.setDate(ziDisponibila.getDate() + parseInt(produs.disponibil));
+                            const lunileAnului = ['Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie'];
+                            const zileleSaptamanii = ['Duminica', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata'];
+        
+                            const dataFormatata = `${ziDisponibila.getDate()}(${zileleSaptamanii[ziDisponibila.getDay()]})/${lunileAnului[ziDisponibila.getMonth()]}/${ziDisponibila.getFullYear()}`;
+                        %>
+                        <%= dataFormatata %>
+                    </time>
+                </span>
+            
+                <span id="produs-ore">Disponibil intre orele: 
+                    <% for(let i = 0; i < produs.ore.length; ++i) { %>
+                        [<%= produs.ore[i] %>] 
+                        <% } %>
+                </span>
+            
+                <span id="produs-abonament">
+                    Abonament: <%= produs.abonament %>
+                </span>
+            
+                <span id="produs-persoana">Persoana 
+                    <% if(produs.persoana_fizica) { %>
+                        fizica
+                    <% } else { %>
+                        juridica
+                    <% } %>
+                </span>
+            
+                <img src=<%= produs.imagine %> id="produs-imagine" />        
+            </div>
+
+            <%- include("../fragmente/footer.ejs");  %> 
+        </main>
+    
+    </body>
+</html>

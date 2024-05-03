@@ -1,0 +1,71 @@
+<article class="produs-in-lista <%= prod.categorie %>" id="ent<%= prod.id %>">
+    <h3 id="prod-nume">
+        <a class="lista-produse-link" href="/produs/<%= prod.id %>" >
+            <%= prod.nume %>
+        </a>
+    </h3>
+
+    <strong id="table-prod-pret" class="produse-table-headings">Pret</strong>
+    <strong id="table-prod-abonament" class="produse-table-headings">Abonament</strong>
+    <strong id="table-prod-ore" class="produse-table-headings">Interval orar</strong>
+    <strong id="table-prod-disponibil" class="produse-table-headings">Data</strong>
+    <strong id="table-prod-persoana" class="produse-table-headings">Furnizor</strong>
+
+    
+    <span id="prod-categorie">Categorie: 
+        <a href="/produse?categorie=<%= prod.categorie %>">
+            <%= prod.categorie %>
+        </a>
+    </span>
+        
+    <span id="prod-pret"><%= prod.pret %> lei</span>
+    
+    <span id="prod-abonament"><%= prod.abonament %></span>
+    
+    <span id="prod-ore">
+        <% for(let i = 0; i < prod.ore.length; ++i) { %>
+            [<%= prod.ore[i] %>] 
+        <% } %>
+    </span>
+    
+    <span id="prod-disponibil">
+        <time>
+            <% 
+                const azi = new Date();
+                const ziDisponibila = new Date(azi);
+                ziDisponibila.setDate(ziDisponibila.getDate() + parseInt(prod.disponibil));
+                const lunileAnului = ['Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie'];
+                const zileleSaptamanii = ['Duminica', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata'];
+                
+                const dataFormatata = `${ziDisponibila.getDate()}(${zileleSaptamanii[ziDisponibila.getDay()]})/${lunileAnului[ziDisponibila.getMonth()]}/${ziDisponibila.getFullYear()}`;
+            %>
+            <%= dataFormatata %>
+        </time>
+    </span>
+    
+    <span id="prod-persoana">Persoana
+        <% if(prod.persoana_fizica) { %>
+        fizica
+        <% } else { %>
+            juridica
+        <% } %>
+    </span>
+    
+    <img src=<%= prod.imagine %> id="prod-imagine" />      
+
+    <div class="accordion" id="acordeon<%= prod.id %>">
+        <div class="accordion-item" id="acordeon<%= prod.id %>">
+            <h2 class="accordion-header" id="acordeonHeading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= prod.id %>" aria-expanded="false" aria-controls="collapse<%= prod.id %>">
+                    Descriere
+                </button>
+            </h2>
+            <div id="collapse<%= prod.id %>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#acordeon">
+                <div class="accordion-body">
+                    <p><em id="prod-descriere"><%= prod.descriere %></em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</article> 
