@@ -1,79 +1,175 @@
 /* navigation bar */
-
 nav {
-    --nav-font-size: 2rem;
-    --navbar-height: 50px;
-    --nav-submediu-width: 105px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: var(--background-color);
-    margin: 10px 6px;
-    height: var(--navbar-height);
-    max-width: calc(100% - 15px);
-    min-height: var(--navbar-height);
+  display: flex;
+  position: sticky;
+  margin: 10px 6px;
+  top: 0;
+  z-index: 100;
+  background-color: #F5B022;
+  max-width: calc(100% - 15px);
+  box-sizing: content-box;
 }
-
+nav #burger, nav #burger-menu {
+  display: none;
+  font-size: 1.3rem;
+  color: #F5F3DC;
+}
 nav ul {
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5px;
-    display: flex;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
 }
-
 nav ul li {
-    margin-left: 3rem;
-    list-style-type: none;
-    font-size: var(--nav-font-size);
+  background-color: #F5B022;
+  margin-left: 3rem;
+  list-style-type: none;
+  font-size: 1.5rem;
+  transition: background-color 0.5s ease;
+  height: 100%;
+  vertical-align: middle;
+}
+nav ul li a {
+  text-decoration: none;
+  margin: auto;
+}
+nav ul li a span, nav ul li a i {
+  font-size: 1.3rem;
+  color: #F5F3DC;
+  font-style: normal;
+}
+nav ul li .menu-name:hover {
+  background-color: #F5CA22;
+  animation: animatie_meniu 1s forwards;
 }
 
-#acasa:hover ul {
-    display: block;
+.cu-submeniu:hover ul {
+  display: block;
+  animation: animatie_submeniu 1s forwards;
+  text-align: center;
 }
 
 .submeniu {
-    display: none;
-    position: absolute;
-    padding: 0;
-    z-index: 10;
-    left: 10%;
-    top: 43px;
-    background-color: var(--background-color);
-    padding: 10px;
-    border: none;
-    width: var(--nav-submediu-width);
-    border-radius: 0 0 10% 10%;
+  display: none;
+  position: absolute;
+  padding: 0;
+  z-index: 10;
+  border: none;
+  width: 105px;
 }
-
 .submeniu li {
-    font-size: 1rem;
-    width: var(--nav-submediu-width);
-    margin: auto;
-    border-top: var(--border-color);
-    border-bottom: var(--border-color);
-    border-radius: 5%;
-    box-sizing: content-box;
-    text-shadow: 1px 1px gray;
-    padding-bottom: 5px;
-    padding-top: 5px;
+  font-size: 1rem;
+  width: 105px;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-top: #F5CA22;
+  border-bottom: #F5CA22;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
 }
-
 .submeniu li a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bolder;
-    border: 2px solid rgba(255,255,255,0) /* pentru a nu se deplasa cand este creat borderul la :hover */
+  display: block;
+  position: relative;
+  color: #F5F3DC;
+  font-weight: bolder;
+  width: 90%;
+  transition: all 0.5s linear;
 }
-
+.submeniu li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 1s ease;
+}
+.submeniu li a:hover::after {
+  background-color: rgb(255, 255, 255);
+}
 .submeniu li a:hover {
-    text-shadow: none;
-    border: 2px solid var(--border-color);
-    border-radius: 20%;
-    box-shadow: -2px 2px 2px var(--color-red);
+  background-color: #F5CA22;
 }
 
-.submeniu li a:active {
-    box-shadow: none;
+@keyframes animatie_meniu {
+  0% {
+    text-shadow: 0 -30px 0px rgba(255, 0, 0, 0.6666666667);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(255, 0, 0, 0.6666666667);
+  }
+}
+@keyframes animatie_submeniu {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top center;
+  }
+  100% {
+    transform: scaleY(100%);
+    transform-origin: top center;
+  }
+}
+@media screen and (max-width: 1200px) {
+  ul li a > span {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .standard-menu li a > i, .standard-menu #acasa a span {
+    display: none !important;
+  }
+  #burger {
+    display: block !important;
+  }
+  #burger-menu:checked + .standard-menu {
+    display: block !important;
+    position: absolute;
+    top: 1.5rem;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    padding: 0;
+  }
+  #burger-menu:checked + .standard-menu #fa-home {
+    display: block !important;
+  }
+  #burger-menu:checked + .standard-menu li, #burger-menu:checked + .standard-menu li * {
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    padding: 0;
+    text-wrap: nowrap;
+    line-height: 1.5rem;
+  }
+  .submeniu {
+    min-height: fit-content !important;
+    transform: scaleY(0);
+    animation: animatie-submeniu 1s forwards;
+  }
+  .submeniu li {
+    display: block;
+    transition: all 0.5s linear;
+  }
+  #burger-menu:checked + .standard-menu a::after {
+    display: none;
+  }
+  #burger-menu:checked + .standard-menu .cu-submeniu .submeniu li {
+    display: block;
+    height: 1.5rem !important;
+    margin: auto;
+  }
+  #burger-menu:checked + .standard-menu .cu-submeniu .submeniu li * {
+    font-weight: normal;
+  }
+  #burger-menu:checked + .standard-menu li:hover, #burger-menu:checked + .standard-menu li:hover > a {
+    background-color: #F5CA22;
+  }
+  #burger-menu:checked + .standard-menu .menu-name:hover {
+    animation: none;
+  }
+  #burger-menu:checked + ul li a > span {
+    display: block;
+  }
 }

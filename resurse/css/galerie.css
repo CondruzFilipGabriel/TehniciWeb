@@ -1,0 +1,130 @@
+.galerie-animata {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0;
+  text-align: center;
+  background-color: lightgrey;
+  border-image-source: url("../imagini/border-image.jpg");
+  border-image-outset: 15px;
+  border-image-slice: 30 fill;
+  border-image-repeat: repeat;
+}
+.galerie-animata picture {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.galerie-animata picture figcaption {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.banner-galerie-aniamata1 {
+  animation: banner 10s infinite;
+}
+
+.banner-galerie-aniamata2 {
+  animation: banner 10s infinite;
+  animation-delay: 5s;
+}
+
+.galerie-animata:hover picture {
+  animation-play-state: paused !important;
+}
+
+@keyframes banner {
+  0% {
+    clip-path: inset(0% 100%);
+    filter: grayscale(100%) saturate(0%) brightness(150%);
+  }
+  50% {
+    clip-path: inset(0% 0%);
+    filter: grayscale(0%) saturate(100%) brightness(100%);
+    z-index: 1;
+  }
+  51% {
+    clip-path: inset(0% 0%);
+    filter: grayscale(0%) saturate(100%) brightness(100%);
+    z-index: 0;
+  }
+  100% {
+    clip-path: inset(0% 0%);
+    filter: grayscale(0%) saturate(100%) brightness(100%);
+  }
+}
+.categorii {
+  width: 100%;
+  margin-top: 30px;
+  counter-reset: item;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.categorii figure {
+  text-align: center;
+}
+.categorii figure picture > img {
+  transition: transform 1s ease;
+}
+.categorii figure picture > img:hover {
+  transform: rotate(360deg) scale(1.5);
+  border-radius: 10%;
+}
+.categorii figure figcaption {
+  position: relative;
+}
+.categorii figure figcaption b {
+  counter-increment: item;
+}
+.categorii figure figcaption b::before {
+  content: counter(item, upper-alpha) ". ";
+}
+.categorii figure figcaption b > a {
+  text-decoration: none;
+  font: inherit !important;
+}
+.categorii figure figcaption .reducere {
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 30%;
+  text-align: left;
+  color: var(--text-color);
+  text-shadow: -1px -1px 0 var(--color-red), 1px -1px 0 var(--border-color), -1px 1px 0 var(--color-red), 1px 1px 0 var(--border-color);
+  width: 90px;
+  font-weight: bolder;
+  height: 0;
+}
+.categorii figure figcaption .reducere .old-price {
+  display: block;
+  font-size: var(--old-price-size);
+}
+.categorii figure figcaption .reducere .new-price {
+  font-size: var(--new-price-size);
+}
+
+@media screen and (max-width: 1700px) {
+  .categorii {
+    grid-template-columns: 1fr 1fr;
+  }
+  .categorii > :nth-child(3n) {
+    grid-column: 1/span 2;
+  }
+  /* dupa finalizare, trebuie decomentat */
+  /* .galerie-animata {
+      display: none;
+  } */
+}
+@media screen and (max-width: 800px) {
+  .categorii {
+    grid-template-columns: 1fr;
+  }
+  .categorii > * {
+    grid-column: 1;
+  }
+}

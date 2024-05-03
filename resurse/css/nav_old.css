@@ -1,0 +1,79 @@
+/* navigation bar */
+
+nav {
+    --nav-font-size: 2rem;
+    --navbar-height: 50px;
+    --nav-submediu-width: 105px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--background-color);
+    margin: 10px 6px;
+    height: var(--navbar-height);
+    max-width: calc(100% - 15px);
+    min-height: var(--navbar-height);
+}
+
+nav ul {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5px;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 3rem;
+    list-style-type: none;
+    font-size: var(--nav-font-size);
+}
+
+#acasa:hover ul {
+    display: block;
+}
+
+.submeniu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    z-index: 10;
+    left: 10%;
+    top: 43px;
+    background-color: var(--background-color);
+    padding: 10px;
+    border: none;
+    width: var(--nav-submediu-width);
+    border-radius: 0 0 10% 10%;
+}
+
+.submeniu li {
+    font-size: 1rem;
+    width: var(--nav-submediu-width);
+    margin: auto;
+    border-top: var(--border-color);
+    border-bottom: var(--border-color);
+    border-radius: 5%;
+    box-sizing: content-box;
+    text-shadow: 1px 1px gray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.submeniu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bolder;
+    border: 2px solid rgba(255,255,255,0) /* pentru a nu se deplasa cand este creat borderul la :hover */
+}
+
+.submeniu li a:hover {
+    text-shadow: none;
+    border: 2px solid var(--border-color);
+    border-radius: 20%;
+    box-shadow: -2px 2px 2px var(--color-red);
+}
+
+.submeniu li a:active {
+    box-shadow: none;
+}

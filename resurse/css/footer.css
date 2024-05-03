@@ -1,5 +1,14 @@
 /* footer */
 
+footer {
+    background-color: var(--text-color);
+    margin-bottom: 8rem;
+}
+footer > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .up-container {
     display: block;
     position: fixed;
@@ -46,7 +55,7 @@
     display: inline-block;
     position: relative;
     border-radius: 50%;
-    bottom: 50px;
+    bottom: 58px;
 }
 
 .up-container:hover .up {
@@ -64,12 +73,12 @@
     position: relative;
     z-index: 110;
     border-radius: 50%;
-    bottom: 1px;
-    left: -1px;
-    width: 85%;
-    height: 85%;
+    bottom: 5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
     text-decoration: none;
-    border: 4px dashed var(--background-color);
+    border: 4px dashed var(--border-color);
     border-radius: 50%;
 }
 
@@ -80,4 +89,74 @@
 
 .watermark {
     display: none;
+}
+
+#banner {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    bottom: 0%;
+    background-color: var(--color-white);
+    border: 2px solid rgba(0,0,0,0);
+    transition: background-color 0.5s, border-color 0.5s;
+    animation: slideIn 5s linear forwards;
+}
+
+#banner a {
+    color: var(--color-dark);
+    font-size: medium;
+}
+
+#cookie-paragraph {
+    text-align: center;
+    margin-bottom: 0.9rem;
+}
+
+#banner #a:visited {
+    color: var(--color-dark);
+}
+
+/* 
+    c2 = var(--highlight-color)
+    c3 = var(--text-color)
+*/
+
+@keyframes slideIn {
+    0% {
+        left: -100%;
+        background-color: var(--color-white);
+        border-color: rgba(0,0,0,0);
+    }
+    45% {
+        left: -55%;
+        background-color: var(--highlight-color);
+        border-color: var(--text-color);
+    }
+    55% {
+        left: -45%;
+        background-color: var(--text-color);
+        border-color: var(--highlight-color);
+    }
+    90% {
+        left: -10%;
+        background-color: var(--text-color);
+        border-color: var(--highlight-color);
+    }
+    100% {
+        left: 0;
+        background-color: var(--highlight-color);
+        border-color: var(--text-color);
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #banner {
+        position: fixed;
+        width: 100%;
+        left: 0%;
+        bottom: 0%;
+        background-color: var(--highlight-color);
+        border-color: var(--text-color);
+        animation: none;
+    }
 }

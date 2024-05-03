@@ -1,0 +1,70 @@
+#produs-back {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-left: 3rem;
+}
+
+.produsus-unic {
+    display: grid;
+    grid-template-areas: 
+        "nume"
+        "imagine"
+        "rating"
+        "categorie"
+        "descriere"
+        "pret"
+        "discount"
+        "disponibil"
+        "ore"
+        "abonament"
+        "persoana"
+    ;
+    grid-column: 1fr;
+
+    text-align: center;
+}
+
+#produs-nume {
+    grid-area: nume;
+}
+
+#produs-descriere {
+    grid-area: descriere;
+}
+
+#produs-categorie {
+    grid-area: categorie;
+}
+
+#produs-rating {
+    grid-area: rating;
+}
+
+#produs-pret {
+    grid-area: pret;
+}
+
+#produs-discount {
+    grid-area: discount;
+}
+
+#produs-disponibil {
+    grid-area: disponibil;
+}
+
+#produs-ore {
+    grid-area: ore;
+}
+
+#produs-abonament {
+    grid-area: abonament;
+}
+
+#produs-persoana {
+    grid-area: persoana;
+}
+
+#produs-imagine {
+    grid-area: imagine;
+    margin: auto;
+}

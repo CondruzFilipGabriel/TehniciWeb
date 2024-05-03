@@ -8,6 +8,7 @@ main {
 }
 
 #welcome {
+    position: relative;
     background-image: url('../imagini/banner\ -\ lung.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,6 +16,23 @@ main {
     height: 300px;
     color: var(--active-color);
     margin: auto;
+    transition: filter 1s;
+}
+
+#welcome::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--important-color);
+    mix-blend-mode: multiply;
+    transition: background-color 1s;
+}
+
+#welcome:hover::before {
+    background-color: var(--active-color);
 }
 
 #welcome > * {
@@ -34,51 +52,72 @@ main {
     font-weight: bolder;
 }
 
-.categorii {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-figcaption {
-    position: relative;
-}
-
-.reducere {
-    display: block;
-    position: absolute;
-    bottom: 100px;
-    left: 10px;
-    text-align: left;
-    color: var(--text-color);
-    text-shadow:
-        -1px -1px 0 var(--color-red),  
-        1px -1px 0 var(--border-color),
-       -1px  1px 0 var(--color-red),
-        1px  1px 0 var(--border-color)
-    ;
-    width: 90px;
-    font-weight: bolder;
-    height: 0;
-}
-
-.old-price {
-    display: block;
-    font-size: var(--old-price-size);
-}
-
-.new-price {
-    font-size: var(--new-price-size);
-}
-
 .servicii {
     width: var(--servicii-default-width);
     height: var(--servicii-default-height);
 }
 
-figure {
-    text-align: center;
+#special-hr {
+    position: relative;
+    height: 10px;
+    border: 5px double var(--highlight-color);
+    border-top: 0;
+    border-radius: 2% / 100%;
+    width: 80%;
+    overflow: visible;
+}
+
+#special-hr:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 10px;
+    left: -5px;
+    top: 5px;
+    border: 5px double var(--highlight-color);
+    border-bottom: 0;
+    border-radius: 2% / 100%;
+}
+
+#text-cu-reflexie {
+    position: relative;
+}
+
+#text-reflectat {
+    transform-origin: 0 0;
+    mask-image: repeating-radial-gradient(circle at 20% 100%, transparent, transparent 1px, black 1px, black 2.5px);
+    -webkit-mask-image: repeating-radial-gradient(circle at 20% 100%, transparent, transparent 1px, black 1px, black 2.5px);
+	transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(12px,-5px); 
+	opacity:0.35;
+}
+
+#text-cu-reflexie, #text-reflectat {
+    font-size: 25px;
+    line-height:40px;
+    font-weight: bold;
+}
+
+#text-cu-reflexie:hover #text-reflectat{
+    animation: text-unda 0.3s infinite;
+}
+
+@keyframes text-unda {
+    0% {
+        mask-image: repeating-radial-gradient(circle at 20% 100%, transparent, transparent 1px, black 1px, black 2.5px);
+        -webkit-mask-image: repeating-radial-gradient(circle at 20% 100%, transparent, transparent 1px, black 1px, black 2.5px);
+    }
+    33% {
+        mask-image: repeating-radial-gradient(circle at 20% 100%, black, transparent 1px, transparent 1px, black 2.5px);
+        -webkit-mask-image: repeating-radial-gradient(circle at 20% 100%, black, transparent 1px, transparent 1px, black 2.5px);
+    }
+    66% {
+        mask-image: repeating-radial-gradient(circle at 20% 100%,  black, black 1px, transparent 1px, transparent 2.5px);
+        -webkit-mask-image: repeating-radial-gradient(circle at 20% 100%, black, black 1px, transparent 1px, transparent 2.5px);
+    }
+    100% {
+        mask-image: repeating-radial-gradient(circle at 20% 100%, transparent, black 1px, black 1px, transparent 2.5px);
+        -webkit-mask-image: repeating-radial-gradient(circle at 20% 100%, transparent, black 1px, black 1px, transparent 2.5px);
+    }
 }
 
 .iframe-container {
@@ -111,12 +150,12 @@ figure {
 
 .span-links-top-servicii {
     position: relative;
-    width: 140px;
+    width: 150px;
 }
 
 .links-top-servicii {
     position: absolute;
-    bottom: 4px;
+    bottom: -8px;
     grid-area: iframe-links;
     display: inline-block;
     padding: 0;
@@ -128,25 +167,25 @@ figure {
     font-size: var(--font-size);
     list-style-type: none;
     display: block;
-    width: 140px;
-    height: 60px;
+    width: 130px;
+    height: 70px;
     border-left: 5px solid var(--border-color);
     overflow: hidden;
 }
 
 .links-top-servicii li > a {
     display: inline-block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     text-decoration: none;
     color: var(--background-color);
     font-weight: 900;
     text-align: center;
-    padding-left: 5px;
+    /* padding-left: 5px; */
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 15px;
-    width: 80%;
-    height: 70%;
+    /* padding-right: 15px; */
+    width: 100%;
+    height: 100%;
     background-color: rgba(245, 211, 92, 0.6);
     border-top-right-radius: 50%;
     border: 5px solid var(--border-color);
@@ -172,10 +211,6 @@ figure {
 
 h4 {
     text-align: center;
-} 
-
-picture > img {
-    border-radius: 10%;
 }
 
 #tab-testimonials {

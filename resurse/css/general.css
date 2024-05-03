@@ -1,4 +1,18 @@
 /* general */
+:root {
+    --highlight-color: #F5AF22;
+    --background-color: #F5B022;
+    --border-color: #F5CA22;
+    --text-color: #F5F3DC;
+    --active-color: #D9F522;
+    --important-color: #81F522;
+    --color-red: #ff0000aa;
+    --color-dark: black;
+    --color-white: white;
+    --background: white;
+    --text: black;
+}
+
 html {
     --inaltime-logo: 100px;
     --latime-logo: 150px;
@@ -9,16 +23,34 @@ html {
     transition: all 0.5s linear;
 }
 
-body {
+.light-theme-colors {
+    --background: white;
+    --text: black;
     --highlight-color: #F5AF22;
     --background-color: #F5B022;
     --border-color: #F5CA22;
     --text-color: #F5F3DC;
     --active-color: #D9F522;
     --important-color: #81F522;
-    --color-red: #ff0000aa;
     --color-dark: black;
+}
+
+.dark-theme-colors {
+    --background: black;
+    --text: white;
+    --highlight-color: #6d98f3;
+    --background-color: #202020;
+    --border-color: #CCCCCC;
+    --text-color: #484848;
+    --active-color: #22F5A6;
+    --important-color: #F522F5;
+    --color-dark: white;
+}
+
+body {
     overflow-x: hidden;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 a:not(li a):not(.up) {
@@ -65,6 +97,30 @@ a:not(li a):not(.up):hover {
     height: auto;
     margin-left: auto;
     margin-right: 30px;
+}
+
+.themes {
+    position: absolute;
+    height: 2.5rem;
+    width: 5rem;
+    top: 3rem;
+    right: 3rem;
+    outline: none;
+}
+
+#dark-theme-label {
+    position: absolute;
+    right: 0;
+}
+
+#light-theme-label {
+    position: absolute;
+    left: 0;
+}
+
+#themeSwitch {
+    position: absolute;
+    right: -2rem;
 }
 
 h1 {
