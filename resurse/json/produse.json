@@ -1,0 +1,318 @@
+{
+    "cale_produse": "/resurse/imagini/produse",
+    "produse": [
+        {
+            "id": "1",
+            "nume": "Pisica Vrajitoare",
+            "descriere": "Maturare in toata casa",
+            "imagine": "cleaning-mic.jpg",
+            "categorie": "Curatenie",
+            "rating": "xxxxx",
+            "pret": "250",
+            "discount": "0",
+            "disponibil": "0",
+            "abonament": "lunar",
+            "ore": [
+                "10-12"
+            ],
+            "persoana_fizica": "true"
+        },
+        {
+            "id": "2",
+            "nume": "Spider Cat SRL",
+            "descriere": "Casa ta nu va mai fi la fel dupa",
+            "imagine": "decorator-interior-mic.jpg",
+            "categorie": "Decorator",
+            "rating": "xxx",
+            "pret": "950",
+            "discount": "5",
+            "disponibil": "2",
+            "abonament": "fara",
+            "ore": [
+                "08-10",
+                "10-12"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "3",
+            "nume": "Solista Miorlau",
+            "descriere": "Te voi invata sa canti pentru a obtine tot ce vrei in viata",
+            "imagine": "canto_mic.jpg",
+            "categorie": "Canto",
+            "rating": "xxxx",
+            "pret": "350",
+            "discount": "0",
+            "disponibil": "1",
+            "abonament": "saptamanal",
+            "ore": [
+                "06-08",
+                "08-10"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "4",
+            "nume": "Robo Cat",
+            "descriere": "Repar tot de sar scantei",
+            "imagine": "electrician_mic.jpg",
+            "categorie": "Electrice",
+            "rating": "xxxxx",
+            "pret": "400",
+            "discount": "0",
+            "disponibil": "5",
+            "abonament": "fara",
+            "ore": [
+                "06-08"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "5",
+            "nume": "Motanul Roof",
+            "descriere": "Nu doar stau pe el, ci si repar acoperisul",
+            "imagine": "reparatii_acoperis_mic.jpg",
+            "categorie": "Reparatii-acoperis",
+            "rating": "x",
+            "pret": "800",
+            "discount": "0",
+            "disponibil": "0",
+            "abonament": "fara",
+            "ore": [
+                "08-10",
+                "10-12"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "6",
+            "nume": "CatTube SRL",
+            "descriere": "Daca ti s-a infundat, noi te ajutam",
+            "imagine": "instalator_mic.jpg",
+            "categorie": "Reparatii-instalatii",
+            "rating": "xx",
+            "pret": "700",
+            "discount": "10",
+            "disponibil": "4",
+            "abonament": "fara",
+            "ore": [
+                "06-08",
+                "08-10",
+                "10-12"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "7",
+            "nume": "Prinsic Handsome",
+            "descriere": "Poti uita sa ai grija de copil, ma ocup eu",
+            "imagine": "baby-sitting-mic.jpg",
+            "categorie": "Babysitting",
+            "rating": "xxxx",
+            "pret": "350",
+            "discount": "0",
+            "disponibil": "5",
+            "abonament": "lunar",
+            "ore": [
+                "12-14",
+                "14-16",
+                "16-18"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "8",
+            "nume": "Pufosila Bucatar",
+            "descriere": "Sigur nu ai gustat niciodata o astfel de mancare...",
+            "imagine": "bucatar-mic.jpg",
+            "categorie": "Gatit",
+            "rating": "xxx",
+            "pret": "200",
+            "discount": "0",
+            "disponibil": "9",
+            "abonament": "saptamanal",
+            "ore": [
+                "12-14",
+                "14-16"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "9",
+            "nume": "The Piano Cats",
+            "descriere": "Invata sa canti la pian de la profesionisti",
+            "imagine": "piano_lessons_mic.jpg",
+            "categorie": "Pian",
+            "rating": "xxxxx",
+            "pret": "250",
+            "discount": "0",
+            "disponibil": "1",
+            "abonament": "fara",
+            "ore": [
+                "16-18",
+                "18-20"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "10",
+            "nume": "Bufonul Mustacios",
+            "descriere": "Stii ca sunt amuzant si ca imi place sa ma joc",
+            "imagine": "children-party-entertainer-mic.jpg",
+            "categorie": "Entertainer",
+            "rating": "xx",
+            "pret": "500",
+            "discount": "0",
+            "disponibil": "2",
+            "abonament": "fara",
+            "ore": [
+                "18-20"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "11",
+            "nume": "Academia de Tors",
+            "descriere": "Avem grija de batrani; suntem acolo cand le e greu",
+            "imagine": "ingrijire-varstnici-mic.jpg",
+            "categorie": "Ingrijire-varstnici",
+            "rating": "x",
+            "pret": "2000",
+            "discount": "15",
+            "disponibil": "0",
+            "abonament": "lunar",
+            "ore": [
+                "12-14",
+                "14-16",
+                "16-18",
+                "18-20"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "12",
+            "nume": "Pisicuta Yummy",
+            "descriere": "Vom sta cu ochii pe animalele dumneavoastra de companie",
+            "imagine": "pet-sitting-mic.jpg",
+            "categorie": "Ingrijire-pets",
+            "rating": "xxxxx",
+            "pret": "150",
+            "discount": "30",
+            "disponibil": "3",
+            "abonament": "fara",
+            "ore": [
+                "14-16",
+                "16-18",
+                "18-20"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "13",
+            "nume": "Pe Labute Purtatori SRL",
+            "descriere": "Noi va aducem bucuria in case",
+            "imagine": "caterer-evenimente-mic.jpg",
+            "categorie": "Catering",
+            "rating": "xxxx",
+            "pret": "450",
+            "discount": "10",
+            "disponibil": "5",
+            "abonament": "fara",
+            "ore": [
+                "20-22",
+                "22-24"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "14",
+            "nume": "Pufanila Cozonacila",
+            "descriere": "Maestru maseur, cu experienta a 9 vieti",
+            "imagine": "massage-mic.jpg",
+            "categorie": "Masaj",
+            "rating": "xxxxx",
+            "pret": "200",
+            "discount": "0",
+            "disponibil": "6",
+            "abonament": "saptamanal",
+            "ore": [
+                "20-22",
+                "22-24"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "15",
+            "nume": "Beattom cel Viteaz JR.",
+            "descriere": "Decat whiskey sau lichior, hai mai bine laptisor",
+            "imagine": "barman_mic.jpg",
+            "categorie": "Barman",
+            "rating": "x",
+            "pret": "300",
+            "discount": "40",
+            "disponibil": "7",
+            "abonament": "lunar",
+            "ore": [
+                "22-24",
+                "00-02",
+                "02-04"
+            ],
+            "persoana_fizica": "true"
+        }, 
+        {
+            "id": "16",
+            "nume": "Cat's Destiny SRL",
+            "descriere": "Nimic nu ne scapa",
+            "imagine": "deratizare_mic.jpg",
+            "categorie": "Deratizare",
+            "rating": "xx",
+            "pret": "430",
+            "discount": "30",
+            "disponibil": "1",
+            "abonament": "fara",
+            "ore": [
+                "20-22",
+                "22-24"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "17",
+            "nume": "Cats In The Cradle SRL",
+            "descriere": "Servicii de transport ca in puf",
+            "imagine": "taxi_mic.jpg",
+            "categorie": "Transport",
+            "rating": "xxx",
+            "pret": "100",
+            "discount": "20",
+            "disponibil": "0",
+            "abonament": "fara",
+            "ore": [
+                "20-22",
+                "22-24",
+                "00-02",
+                "02-04"
+            ],
+            "persoana_fizica": "false"
+        }, 
+        {
+            "id": "18",
+            "nume": "Sta Matza-n Coada SRL",
+            "descriere": "Labute pe mese, mustati printre invitati",
+            "imagine": "organizator_evenimente_mic.jpg",
+            "categorie": "Organizator-evenimente",
+            "rating": "xxxxx",
+            "pret": "1250",
+            "discount": "10",
+            "disponibil": "2",
+            "abonament": "fara",
+            "ore": [
+                "20-22",
+                "22-24",
+                "00-02",
+                "02-04"
+            ],
+            "persoana_fizica": "false"
+        }
+    ]
+}

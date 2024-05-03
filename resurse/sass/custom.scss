@@ -1,0 +1,51 @@
+$highlight-color: #F5AF22;
+$background-color: #F5B022;
+$text-color: #F5F3DC;
+$active-color: #D9F522;
+$important-color: #81F522;
+$color-red: #ff0000aa;
+$color-dark: black;
+
+// customizare variabile Bootstrap
+$primary-bg-subtle: $background-color;
+$light-bg-subtle: $active-color;
+
+$warning: $highlight-color;
+
+$grid-breakpoints: (
+  xs:                 0,
+  sm:                 576px,
+  md:                 1200px,
+  lg:                 1600px,
+  xl:                 1800px,
+  xxl:                2000px
+  );
+
+$border-width:        2px;
+$border-widths: (
+  1:                  2px,
+  2:                  3px,
+  3:                  4px,
+  4:                  5px,
+  5:                  6px
+);
+
+$border-radius:       .375.1rem;
+$border-radius-sm:    .25.1rem;
+$border-radius-lg:    .5.1rem;
+$border-radius-xl:    1.1rem;
+$border-radius-xxl:   2.1rem;
+$border-radius-pill:  50.1rem;
+
+$font-family-base:    "Helvetica Neue", Arial;
+
+$h1-font-size:        44px;
+$h2-font-size:        28px;
+$h3-font-size:        26px;
+$h4-font-size:        22px;
+$h5-font-size:        18px;
+$h6-font-size:        16px;
+
+$btn-color:           $important-color;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";

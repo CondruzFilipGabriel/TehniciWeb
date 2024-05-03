@@ -1,0 +1,203 @@
+{
+    "cale_galerie": "/resurse/imagini/galerie",
+    "imagini": [
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "cleaning-mare.jpg",
+            "nume_mediu": "cleaning-mediu.jpg",
+            "nume_mic": "cleaning-mic.jpg",
+            "descriere": "Curatenie",
+            "timp": "dimineata",
+            "alt": "Servicii de curatenie",
+            "title": "Curatenie",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "decorator-interior-mare.jpg",
+            "nume_mediu": "decorator-interior-mediu.jpg",
+            "nume_mic": "decorator-interior-mic.jpg",
+            "descriere": "Decorator interior",
+            "timp": "dimineata",
+            "alt": "Servicii de decatorat la interior",
+            "title": "Decorator",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "canto_mare.jpg",
+            "nume_mediu": "canto_mediu.jpg",
+            "nume_mic": "canto_mic.jpg",
+            "descriere": "Lectii de canto",
+            "timp": "dimineata",
+            "alt": "Lectii de canto",
+            "title": "Canto",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "electrician_mare.jpg",
+            "nume_mediu": "electrician_mediu.jpg",
+            "nume_mic": "electrician_mic.jpg",
+            "descriere": "Reparatii electrice",
+            "timp": "dimineata",
+            "alt": "Reparatii electrice",
+            "title": "Electrice",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "reparatii_acoperis_mare.jpg",
+            "nume_mediu": "reparatii_acoperis_mediu.jpg",
+            "nume_mic": "reparatii_acoperis_mic.jpg",
+            "descriere": "Reparatii acoperis",
+            "timp": "dimineata",
+            "alt": "Servicii de reparatii a acoperisurilor",
+            "title": "Acoperis",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "instalator_mare.jpg",
+            "nume_mediu": "instalator_mediu.jpg",
+            "nume_mic": "instalator_mic.jpg",
+            "descriere": "Reparatii instalatii",
+            "timp": "dimineata",
+            "alt": "Reparatii instalatii",
+            "title": "Instalatii",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "baby-sitting-mare.jpg",
+            "nume_mediu": "baby-sitting-mediu.jpg",
+            "nume_mic": "baby-sitting-mic.jpg",
+            "descriere": "Babysitting",
+            "timp": "zi",
+            "alt": "Servicii de babysitting",
+            "title": "Babysitting",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "bucatar-mare.jpg",
+            "nume_mediu": "bucatar-mediu.jpg",
+            "nume_mic": "bucatar-mic.jpg",
+            "descriere": "Gatit (bucatar)",
+            "timp": "zi",
+            "alt": "Servicii de gatit",
+            "title": "Gatit",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "piano_lessons_mare.jpg",
+            "nume_mediu": "piano_lessons_mediu.jpg",
+            "nume_mic": "piano_lessons_mic.jpg",
+            "descriere": "Lectii de pian",
+            "timp": "zi",
+            "alt": "Lectii de pian",            
+            "title": "Pian",
+            "license": "https://www.flickr.com/photos/21207597@N07/8028335402"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "children-party-entertainer-mare.jpg",
+            "nume_mediu": "children-party-entertainer-mediu.jpg",
+            "nume_mic": "children-party-entertainer-mic.jpg",
+            "descriere": "Entertainer pentru copii",
+            "timp": "zi",
+            "alt": "Servicii de entertaining pentru copii",
+            "title": "Entertainer",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "ingrijire-varstnici-mare.jpg",
+            "nume_mediu": "ingrijire-varstnici-mediu.jpg",
+            "nume_mic": "ingrijire-varstnici-mic.jpg",
+            "descriere": "Ingrijire varstnici",
+            "timp": "zi",
+            "alt": "Servicii de ingrijire pentru varstnici",
+            "title": "Ingrijire-varstnici",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "pet-sitting-mare.jpg",
+            "nume_mediu": "pet-sitting-mediu.jpg",
+            "nume_mic": "pet-sitting-mic.jpg",
+            "descriere": "Ingrijire animale de companie",
+            "timp": "zi",
+            "alt": "Servicii de ingrijire pentru animalele de companie",
+            "title": "Ingrijire-pets",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "caterer-evenimente-mare.jpg",
+            "nume_mediu": "caterer-evenimente-mediu.jpg",
+            "nume_mic": "caterer-evenimente-mic.jpg",
+            "descriere": "Catering la evenimente",
+            "timp": "noapte",
+            "alt": "Servicii de catering",
+            "title": "Catering",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "massage-mare.jpg",
+            "nume_mediu": "massage-mediu.jpg",
+            "nume_mic": "massage-mic.jpg",
+            "descriere": "Masaj",
+            "timp": "noapte",
+            "alt": "Servicii de masaj",
+            "title": "Masaj",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "barman_mare.jpg",
+            "nume_mediu": "barman_mediu.jpg",
+            "nume_mic": "barman_mic.jpg",
+            "descriere": "Barman",
+            "timp": "noapte",
+            "alt": "Barman",
+            "title": "Barman",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "deratizare_mare.jpg",
+            "nume_mediu": "deratizare_mediu.jpg",
+            "nume_mic": "deratizare_mic.jpg",
+            "descriere": "Deratizare",
+            "timp": "noapte",
+            "alt": "Servicii de deratizare",
+            "title": "Deratizare",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "taxi_mare.jpg",
+            "nume_mediu": "taxi_mediu.jpg",
+            "nume_mic": "taxi_mic.jpg",
+            "descriere": "Transport persoane",
+            "timp": "noapte",
+            "alt": "Servicii de transport persoane",
+            "title": "Transport",
+            "license": "free"
+        },
+        {
+            "cale_relativa": "/market",
+            "nume_mare": "organizator_evenimente_mare.jpg",
+            "nume_mediu": "organizator_evenimente_mediu.jpg",
+            "nume_mic": "organizator_evenimente_mic.jpg",
+            "descriere": "Organizator Evenimente",
+            "timp": "noapte",
+            "alt": "Organizator Evenimente",
+            "title": "Organizator-evenimente",
+            "license": "free"
+        }
+    ]
+}
