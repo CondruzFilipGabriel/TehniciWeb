@@ -1,46 +1,77 @@
-<div class="galerie-animata">
-    <%
-        let j = 0;
-        let k = (j+1) % galerieBanner.length;
-    %>
-        <picture class="banner-galerie-aniamata1">            
-            <img class="banner-poza-mare" src=<%= galerieBanner[j].nume_mare %> alt=<%= galerieBanner[j].alt %> />
-            <figcaption class="banner-brau-text"><%= galerieBanner[j].descriere %></figcaption>
-        </picture>
-        <picture class="banner-galerie-aniamata2">            
-            <img class="banner-poza-mare1" src=<%= galerieBanner[k].nume_mare %> alt=<%= galerieBanner[k].alt %> />
-            <figcaption class="banner-brau-text1"><%= galerieBanner[k].descriere %></figcaption>
-        </picture>
-    <%
-        setTimeout(() => {
-    %>
-    <script>
-        let i = <%= j %>; 
-        let l = <%= k %>;
-        
-        function updateBanner() {
-            console.log("suntem in script tag!!!");
-            document.querySelectorAll('.banner-poza-mare').forEach((img) => {
-                img.src = galerieBanner[i].nume_mare;
-                img.alt = galerieBanner[i].alt;
-            });
-            document.querySelector('.banner-brau-text').textContent = galerieBanner[i].descriere;
-            document.querySelector('.banner-galerie-aniamata1').style.animation = "banner 10s forwards";
+<div class="galerie-animata"></div>
 
-            document.querySelectorAll('.banner-poza-mare1').forEach((img) => {
-                img.src = galerieBanner[l].nume_mare;
-                img.alt = galerieBanner[l].alt;
-            });
-            document.querySelector('.banner-brau-text1').textContent = galerieBanner[l].descriere;
-            document.querySelector('.banner-galerie-aniamata2').style.animation = "banner 10s forwards";
-        }
-        updateBanner();
-    </script>
-    <%
-            <!-- console.log("running the timeout function..."); -->
-        }, 10000);
-    %>
-</div>
+<script>
+    const galerieBannerData = <%- JSON.stringify(galerieBanner) %>;
+    const galerieAnimata = document.querySelector('.galerie-animata');
+
+    function createPictureElement(banner) {
+        const picture = document.createElement('picture');
+        picture.classList.add('banner-galerie-aniamata');
+
+        const img = document.createElement('img');
+        img.classList.add('banner-poza-mare');
+        img.src = banner.nume_mare;
+        img.alt = banner.alt;
+
+        const figcaption = document.createElement('figcaption');
+        figcaption.classList.add('banner-brau-text');
+        figcaption.textContent = banner.descriere;
+
+        picture.appendChild(img);
+        picture.appendChild(figcaption);
+
+        return picture;
+    }
+
+    function applyStyles() {
+        const total = galerieBannerData.length;
+        const animationDuration = total * 10; // 10s dureaza animatia
+        let styles = document.createElement('style');
+        styles.type = 'text/css';
+        document.head.appendChild(styles);
+
+        galerieBannerData.forEach((banner, index) => {
+            const pictureElement = createPictureElement(banner);
+            galerieAnimata.appendChild(pictureElement);
+
+            // cream cate o animatie pentru fiecare poza
+            const startPercent = (index / total) * 100;
+            const endPercent = ((index + 1) / total) * 100;
+
+            const keyframes = `
+                @keyframes animatie-galerie-${index} {
+                    ${startPercent}% { 
+                        clip-path: inset(0% 100%);
+                        filter: grayscale(100%) saturate(0%) brightness(150%);
+                        z-index: 0; 
+                    }
+                    ${(startPercent + endPercent) / 2-0.1}% { 
+                        clip-path: inset(0% 0%);
+                        filter: grayscale(0%) saturate(100%) brightness(100%);
+                        z-index: 1;
+                    }
+                    ${(startPercent + endPercent) / 2}% { 
+                        clip-path: inset(0% 0%);
+                        filter: grayscale(0%) saturate(100%) brightness(100%);
+                        z-index: 1;
+                    }
+                    ${endPercent}% { 
+                        clip-path: inset(0% 0%);
+                        filter: grayscale(0%) saturate(100%) brightness(100%);
+                        z-index: 0; 
+                    }
+                }
+            `;
+
+            styles.sheet.insertRule(keyframes, styles.sheet.cssRules.length);
+
+            pictureElement.style.animation = `animatie-galerie-${index} ${animationDuration}s infinite`;
+        });
+    }
+
+    applyStyles();
+</script>
+
 
 <div class="categorii">
     <% for(let i = 0; i < Math.floor(galerie.length / 3) * 3; ++i) { 
