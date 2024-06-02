@@ -222,13 +222,17 @@ function initGalerie() {
 
 initGalerie();
 
-function filtrareGalerie(res, _perioada_din_zi) {
+function perioadaDinZi() {
     let ora = new Date().getHours();
     let timp = "";
     if (ora >= 5 && ora < 12 ) timp = "dimineata";
     else if(ora >= 12 && ora < 20) timp = "zi";
     else timp = "noapte";
-    if(!_perioada_din_zi) _perioada_din_zi = timp;
+    return timp;
+}
+
+function filtrareGalerie(res, _perioada_din_zi) {
+    if(!_perioada_din_zi) _perioada_din_zi = perioadaDinZi();
     
     // _perioada_din_zi = "noapte";
     // let galerie = obGlobal.obGalerie.imagini;
@@ -249,8 +253,9 @@ function galerieBanner() {
 }
 
 function afisareGalerie(res, _perioada_din_zi) {
-    let galerie = filtrareGalerie(_perioada_din_zi);
-    res.render('pagini/market', { "galerie": galerie, "galerieBanner": galerieBanner() });
+    let galerie = filtrareGalerie(res, _perioada_din_zi);
+    let galerie_banner = galerieBanner();
+    res.render('pagini/market', { "galerie": galerie, "galerieBanner": galerie_banner });
 }
 
 // functie care incarca produsele din JSON (ante-config. BD)
@@ -272,7 +277,9 @@ app.use("/node_modules/bootstrap-icons", express.static(path.join(__dirname, "no
 app.use("/",express.static("./node_modules/bootstrap/dist/"));
 
 app.get(['/', '/index', '/home'], function(req, res) {
-    res.render('pagini/index', { ip: req.ip, "galerie": filtrareGalerie(), "galerieBanner": galerieBanner() });
+    let galerie_banner = galerieBanner();
+    let filtrare_galerie = filtrareGalerie();
+    res.render('pagini/index', { ip: req.ip, "galerie": filtrare_galerie, "galerieBanner": galerie_banner });
 });
 
 app.get('/*.ejs', function(req, res) {
